@@ -1,0 +1,215 @@
+
+body {
+    background-color: #FFFFFF; 
+}
+.div-background-img {
+    background: url('Images/XInvoices_Transparent.png') no-repeat center;
+    background-size:400px;
+    height:541px;
+}
+.boxsizingBorder {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.metrouicss .page {
+    background-color: #FFFFFF;
+    /*margin: auto;
+    width: 940px;*/
+}
+.browsers-icons img {
+    float: left;
+    margin-right: 20px;
+}
+.github-info {
+}
+#brand-name {
+    line-height: 24px;
+    margin-top: 2px;
+}
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    border-color: -moz-use-text-color -moz-use-text-color #DDDDDD;
+    border-image: none;
+    border-style: none none dotted;
+    border-width: 0 0 1px;
+    color: #DDDDDD;
+}
+#social {
+    margin-bottom: 90px;
+}
+#shareme .box {
+    clear: both;
+    margin: 5% 8% 0;
+    width: 100%;
+}
+#shareme .box a {
+    color: #404040;
+    text-shadow: 0 1px 1px rgba(167, 167, 167, 0.4);
+}
+#shareme .box a:hover {
+    text-decoration: none;
+}
+#shareme .count {
+    border-right: 2px solid #57B8D1;
+    float: left;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 40px;
+    padding-right: 10px;
+}
+#shareme .share {
+    float: left;
+    font-size: 20px;
+    margin-left: 10px;
+    width: 82px;
+}
+#shareme .buttons {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    padding: 10px;
+    position: absolute;
+    width: 294px;
+}
+#shareme .button {
+    background-color: transparent;
+    float: left;
+    margin: 0 15px 0 0;
+    max-width: 50px;
+    min-width: 10px;
+}
+#shareme .facebook {
+    margin: 0 4px 0 0;
+}
+#carousel1 {
+    height: 242px;
+}
+#sponsorBlock {
+    height: 300px;
+}
+#page-index .carousel .control {
+    bottom: -40px;
+    left: auto;
+    top: auto;
+}
+#page-index .carousel .control.left {
+    right: 100px;
+}
+#page-index .carousel .control.right {
+    right: 30px;
+}
+.metrouicss .charms, .metrouicss .app-bar, .metrouicss .message-dialog, .metrouicss .error-bar, .metrouicss .warning-bar, .metrouicss .info-bar {
+    position: absolute;
+}
+.metrouicss .page {
+    width: 724px;
+}
+.metrouicss .hero-unit > img {
+}
+.metrouicss .browsers-icons img {
+}
+.metrouicss .page {
+    width: 100%;
+}
+.metrouicss .hero-unit > img {
+}
+.metrouicss .modern-ui-logo {
+    height: 24px;
+    width: 24px;
+}
+.metrouicss .github-info {
+    margin-top: 5px;
+}
+.metrouicss a, .metrouicss .link {
+    font-size: 9pt;
+}
+.metrouicss h3 {
+    line-height: 11px;
+}
+.metrouicss .no-mobile {
+    display: none;
+}
+.metrouicss #carousel1 {
+    height: 300px !important;
+}
+.metrouicss .hero-unit img {
+    display: none;
+}
+.metrouicss #jetbrains {
+    display: none;
+}
+.metrouicss #brand-name {
+    display: none;
+}
+.CopyrightDiv {
+    text-align:center;
+    position: fixed;
+    bottom: 0px;
+    margin-right: auto;
+    margin-left: 33%;
+}
+.DivCentrePage {
+    background-color: rgba(255, 255, 255, 0.9); /* Color white with alpha 0.9*/
+    margin:0 auto;
+    text-align:left;
+    width:90%;
+    clear:both;
+}
+.centeredFooter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -200px;
+}
+.centeredElement {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+.horizontallyCenteredElement {
+    position: relative;
+    left: 50%;
+    margin-left: -100px;
+}
+.rightAlignedElement {
+    position: relative;
+    left: 100%;
+    margin-left: -200px;
+}
+#box {
+    margin:0 auto;
+    position: fixed;
+    width: 89%;
+    top: 140px;
+    bottom: 10px;
+    clear:both;
+    opacity:0.4;
+    text-align:center;
+    vertical-align:central ;
+    align-content: center;
+    border:2px solid maroon;
+    background-color:red;
+    font-family:'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+    color:black;
+}
+.preScrollable {
+    width: 100%;
+    overflow: scroll;
+}
+
+.Sample {
+    height: 420px;
+}
+
+.Licence {
+    height: 530px;
+}
