@@ -3,7 +3,7 @@ body {
     background-color: #FFFFFF; 
 }
 .div-background-img {
-    background: url('Images/FCS_Transparent.png') no-repeat center;
+    background: url('../images/FCS_transparent.png') no-repeat center;
     background-size:400px;
     height:541px;
 }
