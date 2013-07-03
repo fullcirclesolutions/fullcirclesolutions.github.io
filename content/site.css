@@ -3,7 +3,7 @@ body {
     background-color: #FFFFFF; 
 }
 .div-background-img {
-    background: url('Images/XInvoices_Transparent.png') no-repeat center;
+    background: url('Images/FCS_Transparent.png') no-repeat center;
     background-size:400px;
     height:541px;
 }
@@ -12,11 +12,11 @@ body {
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
-.metrouicss .page {
+/*.metrouicss .page {
     background-color: #FFFFFF;
     /*margin: auto;
     width: 940px;*/
-}
+/*}*/
 .browsers-icons img {
     float: left;
     margin-right: 20px;
