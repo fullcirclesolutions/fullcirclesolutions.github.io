@@ -82,7 +82,7 @@ textarea {
 
 body {
   /*margin: 0;*/
-  background-image:url('../../../Images/XInvoices_Transparent_Opaque.png') ;
+  background-image:url('../../../images/FCS_transparent.png') ;
   background-repeat:no-repeat;
   background-color:none;
   background-size:400px;
@@ -295,9 +295,9 @@ figure {
 /*
  * Corrects margin displayed oddly in IE6/7
  */
-/*form {
+form {
   margin: 0;
-}*/
+}
 /*
  * Define consistent border, margin, and padding
  */
