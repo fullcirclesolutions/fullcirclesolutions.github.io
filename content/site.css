@@ -107,16 +107,16 @@ hr {
 .metrouicss .charms, .metrouicss .app-bar, .metrouicss .message-dialog, .metrouicss .error-bar, .metrouicss .warning-bar, .metrouicss .info-bar {
     position: absolute;
 }
-.metrouicss .page {
+/*.metrouicss .page {
     width: 724px;
-}
+}*/
 .metrouicss .hero-unit > img {
 }
 .metrouicss .browsers-icons img {
 }
-.metrouicss .page {
+/*.metrouicss .page {
     width: 100%;
-}
+}*/
 .metrouicss .hero-unit > img {
 }
 .metrouicss .modern-ui-logo {
