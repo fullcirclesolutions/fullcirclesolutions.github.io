@@ -107,16 +107,10 @@ hr {
 .metrouicss .charms, .metrouicss .app-bar, .metrouicss .message-dialog, .metrouicss .error-bar, .metrouicss .warning-bar, .metrouicss .info-bar {
     position: absolute;
 }
-/*.metrouicss .page {
-    width: 724px;
-}*/
 .metrouicss .hero-unit > img {
 }
 .metrouicss .browsers-icons img {
 }
-/*.metrouicss .page {
-    width: 100%;
-}*/
 .metrouicss .hero-unit > img {
 }
 .metrouicss .modern-ui-logo {
@@ -146,6 +140,19 @@ hr {
 }
 .metrouicss #brand-name {
     display: none;
+}
+.metrouicss .nav-bar-clear {
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  *zoom: 1;
+}
+.metrouicss .nav-bar-clear .nav-bar-inner {
+  *zoom: 1;
 }
 .CopyrightDiv {
     text-align:center;
