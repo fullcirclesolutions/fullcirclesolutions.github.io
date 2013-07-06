@@ -192,7 +192,8 @@ hr {
   float: left;
   margin: 0 5px;
 }
-.metrouicss .nav-bar .nav-bar-inner > .blackdivider{
+
+.metrouicss .nav-bar .nav-bar-inner > ul.menu > li.blackdivider {
   position: relative;
   margin: 5px;
   line-height: 20px;
