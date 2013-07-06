@@ -332,6 +332,7 @@ hr {
   font-weight: normal;
   font-size: 10pt;
   width: 1px;
+  color: black;
   border-right: 1px #000000 solid;
 }
 
