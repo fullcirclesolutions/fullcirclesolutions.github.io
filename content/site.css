@@ -6,6 +6,25 @@ body {
     background-size:400px;
     height:541px;
 }
+
+.div-xi-background-img {
+    background: url('../images/XInvoices.png') no-repeat center;
+    background-size:400px;
+    height:541px;
+}
+
+.div-xr-background-img {
+    background: url('../images/XRayMachine.png') no-repeat center;
+    background-size:400px;
+    height:541px;
+}
+
+.div-hs-background-img {
+    background: url('../images/HydratedSolutions.png') no-repeat center;
+    background-size:400px;
+    height:541px;
+}
+
 .boxsizingBorder {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
