@@ -3,26 +3,22 @@ body {
 }
 .div-background-img {
     background: url('../images/FCS_transparent.png') no-repeat center;
-    background-size:400px;
-    height:541px;
+    background-size:300px;
 }
 
 .div-xi-background-img {
     background: url('../images/XInvoices_Transparent_Opaque.png') no-repeat center;
-    background-size:400px;
-    height:541px;
+    background-size:300px;
 }
 
 .div-xr-background-img {
     background: url('../images/XRayMachine_Transparent_Opaque.png') no-repeat center;
-    background-size:400px;
-    height:541px;
+    background-size:300px;
 }
 
 .div-hs-background-img {
     background: url('../images/HydratedSolutions_Transparent_Opaque.png') no-repeat center;
-    background-size:400px;
-    height:541px;
+    background-size:300px;
 }
 
 .boxsizingBorder {
