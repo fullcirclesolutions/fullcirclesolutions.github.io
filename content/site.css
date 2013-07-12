@@ -391,7 +391,7 @@ hr {
     color:black;
 }
 .preScrollable {
-    width: 100%;
+    width: 89%;
     overflow: scroll;
 }
 
