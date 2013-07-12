@@ -414,6 +414,9 @@ hr {
     overflow: scroll;
 }
 
+.Homepage {
+    height: 320px;
+}
 .Sample {
     height: 420px;
 }
