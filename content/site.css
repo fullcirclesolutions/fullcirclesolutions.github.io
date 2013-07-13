@@ -420,3 +420,7 @@ hr {
 .Licence {
     height: 530px;
 }
+
+ul.circle {
+	list-style-type: circle;
+}
