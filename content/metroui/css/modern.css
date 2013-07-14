@@ -1032,9 +1032,10 @@ License:	CC BY-SA 3.0 -- http://creativecommons.org/licenses/by-sa/3.0/
   color: rgba(0, 0, 0, 0.6);
   font-size: 90%;
 }
+/*
 .metrouicss h5:hover {
   color: rgba(0, 0, 0, 0.8);
-}
+}*/
 .metrouicss h5:active {
   color: rgba(0, 0, 0, 0.4);
 }
