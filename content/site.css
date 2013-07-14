@@ -409,40 +409,40 @@ hr {
     float: left;
 }
 .span12 {
-    width: 1150px;
+    width: 1170px;
 }
 .span11 {
-    width: 1050px;
+    width: 1070px;
 }
 .span10 {
-    width: 950px;
+    width: 970px;
 }
 .span9 {
-    width: 850px;
+    width: 870px;
 }
 .span8 {
-    width: 750px;
+    width: 770px;
 }
 .span7 {
-    width: 650px;
+    width: 670px;
 }
 .span6 {
-    width: 550px;
+    width: 570px;
 }
 .span5 {
-    width: 450px;
+    width: 470px;
 }
 .span4 {
-    width: 350px;
+    width: 370px;
 }
 .span3 {
-    width: 250px;
+    width: 270px;
 }
 .span2 {
-    width: 150px;
+    width: 170px;
 }
 .span1 {
-    width: 50px;
+    width: 70px;
 }
 .row-fluid {
     width: 100%;
@@ -489,7 +489,7 @@ hr {
     width: 31.9149%;
 }
 .row-fluid > .span3 {
-    width: 23.4043%;
+    width: 22.0000%;
 }
 .row-fluid > .span2 {
     width: 14.8936%;
