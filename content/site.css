@@ -409,40 +409,40 @@ hr {
     float: left;
 }
 .span12 {
-    width: 1170px;
+    width: 1150px;
 }
 .span11 {
-    width: 1070px;
+    width: 1050px;
 }
 .span10 {
-    width: 970px;
+    width: 950px;
 }
 .span9 {
-    width: 870px;
+    width: 850px;
 }
 .span8 {
-    width: 770px;
+    width: 750px;
 }
 .span7 {
-    width: 670px;
+    width: 650px;
 }
 .span6 {
-    width: 570px;
+    width: 550px;
 }
 .span5 {
-    width: 470px;
+    width: 450px;
 }
 .span4 {
-    width: 370px;
+    width: 350px;
 }
 .span3 {
-    width: 270px;
+    width: 250px;
 }
 .span2 {
-    width: 170px;
+    width: 150px;
 }
 .span1 {
-    width: 70px;
+    width: 50px;
 }
 .row-fluid {
     width: 100%;
