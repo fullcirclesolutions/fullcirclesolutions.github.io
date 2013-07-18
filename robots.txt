@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /pastrels/
-Disallow: /59DB54F3-EDB5-420F-877F-55ABE188D8EF/
+Disallow: /update-center/
 sitemap: http://fullcirclesolutions.com.au/Sitemap.xml
