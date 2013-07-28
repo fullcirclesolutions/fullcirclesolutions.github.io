@@ -22,12 +22,12 @@ body {
 }
 
 .div-ss-background-img {
-    background: url('../images/StandardSuite_Opaque.png') no-repeat center;
+    background: url('../images/StandardSuite_Opaque.jpg') no-repeat center;
     background-size:300px;
 }
 
 .div-es-background-img {
-    background: url('../images/EnterpriseSuite_Opaque.png') no-repeat center;
+    background: url('../images/EnterpriseSuite_Opaque.jpg') no-repeat center;
     background-size:300px;
 }
 
