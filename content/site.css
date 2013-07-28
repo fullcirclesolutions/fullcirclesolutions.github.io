@@ -21,6 +21,16 @@ body {
     background-size:300px;
 }
 
+.div-ss-background-img {
+    background: url('../images/StandardSuite_Opaque.png') no-repeat center;
+    background-size:300px;
+}
+
+.div-es-background-img {
+    background: url('../images/EnterpriseSuite_Opaque.png') no-repeat center;
+    background-size:300px;
+}
+
 .boxsizingBorder {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
