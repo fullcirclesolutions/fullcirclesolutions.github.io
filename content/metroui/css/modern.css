@@ -82,7 +82,7 @@ textarea {
 
 body {
   /*margin: 0;*/
-  background-image:url('../../../images/FCS_transparent.png') ;
+  background-image:url('../../../images/FCS_transparent_opaque.png') ;
   background-repeat:no-repeat;
   background-color:none;
   background-size:400px;
