@@ -1,1 +1,3 @@
-{"connectionCheckUrl":"http://www.google.com/","hydratedsolutions":{"version":"4.0.0.0",filename:"hydratedsolutions.exe"}}
+{"connectionCheckUrl":"http://www.google.com/","releasedetails":{"release":{"majorversion":"4","latestversion":"4.0.0.0",filename:"hydratedsolutions.exe"}},
+																{"release":{"majorversion":"5","latestversion":"4.0.0.0",filename:"hydratedsolutions.exe"}},
+																{"release":{"majorversion":"6","latestversion":"4.0.0.0",filename:"hydratedsolutions.exe"}}}}
