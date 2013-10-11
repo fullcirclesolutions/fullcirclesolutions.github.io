@@ -410,6 +410,20 @@ hr {
     border-style:solid; 
     border-collapse:collapse;
 }
+.tick-img {
+    background-image:url("images/tick.png");
+    background-position: center;
+    width: 25px;
+    background-repeat: no-repeat;
+}
+.x-img {
+    background-image:url("images/x.png");
+    background-position: center;
+    width: 25px;
+    background-repeat: no-repeat;
+}
+
+
 #box {
     margin:0 auto;
     position: fixed;
