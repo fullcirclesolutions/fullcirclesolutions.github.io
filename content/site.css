@@ -422,6 +422,7 @@ hr {
     border-style:solid; 
     border-collapse:collapse;
     width:25px;
+    height: auto;
 }
 
 .x-img {
@@ -433,6 +434,7 @@ hr {
     border-style:solid; 
     border-collapse:collapse;
     width:25px;
+    height: auto;
 }
 
 #box {
