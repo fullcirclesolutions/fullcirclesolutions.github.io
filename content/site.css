@@ -411,16 +411,18 @@ hr {
     border-collapse:collapse;
 }
 .tick-img {
-    background-image:url("images/tick.png");
+    background-image:url("images/tick.jpg");
     background-position: center;
-    width: 25px;
     background-repeat: no-repeat;
+    border-width:0px;
+    width: 25px;
 }
 .x-img {
-    background-image:url("images/x.png");
+    background-image:url("images/x.jpg");
     background-position: center;
-    width: 25px;
     background-repeat: no-repeat;
+    border-width:0px;
+    width: 25px;
 }
 
 
