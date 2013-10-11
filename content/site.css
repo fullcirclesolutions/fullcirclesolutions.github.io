@@ -400,7 +400,8 @@ hr {
     margin-left: -200px;
 }
 
-.featureTableCell {
+.featureHeading {
+    font-weight:bold;
     text-align:center;
     border-width:1px; 
     border-style:solid; 
