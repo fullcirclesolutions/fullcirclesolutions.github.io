@@ -400,10 +400,15 @@ hr {
     margin-left: -200px;
 }
 .featureTableCell {
+    text-align:center;
     border-width:1px; 
     border-style:solid; 
     border-collapse:collapse
 }
+.feature {
+    border-width:1px; 
+    border-style:solid; 
+    border-collapse:collapse
 }
 #box {
     margin:0 auto;
