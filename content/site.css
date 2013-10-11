@@ -399,6 +399,12 @@ hr {
     left: 100%;
     margin-left: -200px;
 }
+.featureTableCell {
+    border-width:1px; 
+    border-style:solid; 
+    border-collapse:collapse
+}
+}
 #box {
     margin:0 auto;
     position: fixed;
