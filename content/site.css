@@ -414,7 +414,7 @@ hr {
 }
 
 .tick-img {
-    background-image:url("images/tick.jpg");
+    background-image:url("/images/tick.jpg");
     background-position: center;
     background-repeat: no-repeat;
     text-align:center;
@@ -425,7 +425,7 @@ hr {
 }
 
 .x-img {
-    background-image:url("images/x.jpg");
+    background-image:url("/images/x.jpg");
     background-position: center;
     background-repeat: no-repeat;
     text-align:center;
