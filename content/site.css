@@ -416,24 +416,25 @@ hr {
 
 .tick-img {
     background-image:url("/images/tick.jpg");
+    background-size: 25px 25px;
     background-position: center;
     background-repeat: no-repeat;
     text-align:center;
     border-width: 1px; 
     border-style:solid; 
     border-collapse:collapse;
-    background-size: 25px 25px;
+    
 }
 
 .x-img {
     background-image:url("/images/x.jpg");
+    background-size: 25px 25px;
     background-position: center;
     background-repeat: no-repeat;
     text-align:center;
     border-width: 1px; 
     border-style:solid; 
     border-collapse:collapse;
-    background-size: 25px 25px;
 }
 
 #box {
