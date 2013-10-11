@@ -399,32 +399,41 @@ hr {
     left: 100%;
     margin-left: -200px;
 }
+
 .featureTableCell {
     text-align:center;
     border-width:1px; 
     border-style:solid; 
     border-collapse:collapse;
 }
+
 .feature {
     border-width:1px; 
     border-style:solid; 
     border-collapse:collapse;
 }
+
 .tick-img {
     background-image:url("images/tick.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    border-width:0px;
-    width: 25px;
+    text-align:center;
+    border-width:1px; 
+    border-style:solid; 
+    border-collapse:collapse;
+    width:25px;
 }
+
 .x-img {
     background-image:url("images/x.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    border-width:0px;
-    width: 25px;
+    text-align:center;
+    border-width:1px; 
+    border-style:solid; 
+    border-collapse:collapse;
+    width:25px;
 }
-
 
 #box {
     margin:0 auto;
