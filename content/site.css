@@ -419,10 +419,10 @@ hr {
     background-position: center;
     background-repeat: no-repeat;
     text-align:center;
-    border-width:1px; 
+    border-width: 1px; 
     border-style:solid; 
     border-collapse:collapse;
-    background-size:25px 25px;
+    background-size: 25px 25px;
 }
 
 .x-img {
@@ -430,10 +430,10 @@ hr {
     background-position: center;
     background-repeat: no-repeat;
     text-align:center;
-    border-width:1px; 
+    border-width: 1px; 
     border-style:solid; 
     border-collapse:collapse;
-    background-size:25px 25px;
+    background-size: 25px 25px;
 }
 
 #box {
