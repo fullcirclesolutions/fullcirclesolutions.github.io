@@ -572,6 +572,7 @@ h5.footer {
 }
 a.footer {
   color:white;
+  font-size: 9pt;
 }
 a.twitter {
     background: url("/images/twitter3.png") no-repeat scroll 0.4em 0.1em transparent;
