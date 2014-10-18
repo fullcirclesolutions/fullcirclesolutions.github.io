@@ -138,8 +138,7 @@ function backgroundSlideshow () {
 		  'images/bg-slider/2.jpg',
           'images/bg-slider/3.jpg',
 		  'images/bg-slider/4.jpg',
-		  'images/bg-slider/5.jpg',
-		  'images/bg-slider/6.jpg'
+		  'images/bg-slider/5.jpg'
         ], {
           duration: 5000,
           duration: 5000,
