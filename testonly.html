@@ -7,6 +7,7 @@
 			$(document).ready(function () {
 				var varType;
 				var varUrl;
+				var varHeaders;
 				var varData;
 				var varContentType;
 				var varDataType;
@@ -17,7 +18,7 @@
 						type : varType, //GET or POST or PUT or DELETE verb
 						url : varUrl, // Location of the service
 						crossDomain: true,
-						headers : {"Access-Control-Allow-Origin", "*", "Access-Control-Request-Method" , "POST"},
+						headers : varHeaders,
 						data : varData, //Data sent to server
 						contentType : varContentType, // content type sent to server
 						dataType : varDataType, //Expected data format from server
@@ -46,6 +47,7 @@
 					debugger;
 					varType = "POST";
 					varUrl = "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/Service.svc/GetData";
+					varHeaders= '{"Access-Control-Allow-Origin", "*", "Access-Control-Request-Method", "POST"}'
 					//varData = '{"Country": "' + $('#ddlCountry').val() + '"}';
 					varData = '{"value":"10"}';
 					varContentType = "application/json; charset=utf-8";
