@@ -12,14 +12,14 @@
 					"</s:Body>" +
 				"</s:Envelope>";
 				$("#btnEmailLicenceKey").click(function () {
-					debugger;
+					//debugger;
 					$.ajax({
 						type: "POST",
 						url: "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/LicenceService.svc/GetData",
 						data: '{"value": "' + 10 + '"}',
 						timeout: 10000,
 						contentType: "application/json; charset=utf-8",
-						dataType: "json",
+						dataType: "jsonp",
 						processdata: true,
 						//beforeSend: function (xhr) {
 						//	xhr.setRequestHeader("SOAPAction", "http://tempuri.org/ILicenceService/GetData");
@@ -28,12 +28,13 @@
 							//$(data).find("GetDataResponse").each(function () {
 							//	alert($(this).find("GetDataResult").text());
 							//});
-							if (DataType == "json") {
-								resultObject = result.GetUserResult;
+							//if (DataType == "jsonp") {
+							debugger;
+								resultObject = result.GetDataResult;
 								for (i = 0; i < resultObject.length; i++) {
 									alert(resultObject[i]);
 								}
-							}
+							//}
 						},
 						error: function (xhr, status, error) {
 							alert(error);
