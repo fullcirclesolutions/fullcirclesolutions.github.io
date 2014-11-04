@@ -15,14 +15,14 @@
 					debugger;
 					$.ajax({
 						type: "POST",
-						url: "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/LicenceService.svc",
+						url: "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/LicenceService.svc/GetData",
 						data: bhRequest,
 						timeout: 10000,
 						contentType: "text/xml",
 						dataType: "xml",
-						beforeSend: function (xhr) {
-							xhr.setRequestHeader("SOAPAction", "http://tempuri.org/ILicenceService/GetData");
-						},
+						//beforeSend: function (xhr) {
+						//	xhr.setRequestHeader("SOAPAction", "http://tempuri.org/ILicenceService/GetData");
+						//},
 						success: function (data) {
 							$(data).find("GetDataResponse").each(function () {
 								alert($(this).find("GetDataResult").text());
