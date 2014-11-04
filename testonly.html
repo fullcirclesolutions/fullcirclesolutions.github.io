@@ -22,7 +22,7 @@
 						dataType: "xml",
 						async: "false",
 						beforeSend: function (xhr) {
-							xhr.setRequestHeader("SOAPAction", "http://tempuri.org/ILicence/GetData");
+							xhr.setRequestHeader("SOAPAction", "http://tempuri.org/ILicenceService/GetData");
 						},
 						success: function (data) {
 							$(data).find("GetDataResponse").each(function () {
