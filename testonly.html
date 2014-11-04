@@ -13,11 +13,17 @@
 				//					"</s:Body>" +
 				//				"</s:Envelope>";
 				$("#btnEmailLicenceKey").click(function () {
-					jQuery.getJSON('http://' + hostAddress + '/Service.svc/getdata?callback=?',
-								   '{ "value" : 10 }',
-									function(data) {
-										alert('Received ' + data.length + ' Data');
-									});
+					//jQuery.getJSON('http://' + hostAddress + '/Service.svc/getdata?callback=?',
+					//			   '{ "value" : 10 }',
+					//				function(data) {
+					//					alert('Received ' + data.length + ' Data');
+					//				});
+					debugger;
+					jQuery.getJSON('http://' + hostAddress + '/Customers.svc/getdata?id=1&callback=?',
+								   null,
+								   function(data) {
+								       alert('Received ' + data.length + ' Data');
+								   });
 					//debugger;
 					//jQuery.support.cors = true;
 					//$.ajax({
