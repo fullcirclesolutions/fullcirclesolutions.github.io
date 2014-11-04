@@ -15,17 +15,18 @@
 
 				function CallService() {
 					$.ajax({
-						type : varType, //GET or POST or PUT or DELETE verb
+						//type : varType, //GET or POST or PUT or DELETE verb
+						method: 'GET',
 						url : varUrl, // Location of the service
 						crossDomain: true,
 						headers : varHeaders,
 						//data : varData, //Data sent to server
-						data : null
-						contentType : varContentType, // content type sent to server
-						dataType : varDataType, //Expected data format from server
-						processdata : varProcessData, //True or False
+						//data : null,
+						//contentType : varContentType, // content type sent to server
+						//dataType : varDataType, //Expected data format from server
+						//processdata : varProcessData, //True or False
 						success : function(msg) {//On Successful service call
-									alert('Received ' + data.length + ' Data');
+									alert('Email should be sent');
 								  }
 								  //,
 						//error: ServiceFailed // When Service call fails
@@ -46,13 +47,14 @@
 					//					alert('Received ' + data.length + ' Data');
 					//				});
 					debugger;
-					varType = "POST";
+					//varType = "POST";
 					//http://localhost:50956/Service.svc/Data/?name=Andrew&value=20
 					//http://localhost:50956/Service.svc/EmailLicence/?name=Bob%20Smith&companyName=SomeCompany&emailTo=andrew.paul.gray@gmail.com&productCode=SauceryNUnit
-					varUrl = "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/Service.svc/GetData/?name=Andrew&value=20";
-					//varHeaders= '{"Access-Control-Allow-Origin", "*", "Access-Control-Request-Method", "POST"}'
+					//varUrl = "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/Service.svc/GetData/?name=Andrew&value=20";
+					varUrl = http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/Service.svc/EmailLicence/?name=Bob%20Smith&companyName=SomeCompany&emailTo=andrew.paul.gray@gmail.com&productCode=SauceryNUnit
+					varHeaders= '{"Access-Control-Allow-Origin", "*", "Access-Control-Request-Method", "GET,POST,OPTIONS"}'
 					//varData = '{"Country": "' + $('#ddlCountry').val() + '"}';
-					varData = '{"value":"10"}';
+					//varData = '{"value":"10"}';
 					varContentType = "application/json; charset=utf-8";
 					varDataType = "json"; 
 					varProcessData = true; 
