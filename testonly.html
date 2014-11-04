@@ -5,6 +5,28 @@
 		<script type="text/javascript">
 			var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
 			$(document).ready(function () {
+				var varType;
+				var varUrl;
+				var varData;
+				var varContentType;
+				var varDataType;
+				var varProcessData; 
+
+				function CallService() {
+					$.ajax({
+						type : varType, //GET or POST or PUT or DELETE verb
+						url : varUrl, // Location of the service
+						data : varData, //Data sent to server
+						contentType : varContentType, // content type sent to server
+						dataType : varDataType, //Expected data format from server
+						processdata : varProcessData, //True or False
+						success : function(msg) {//On Successful service call
+									alert('Received ' + data.length + ' Data');
+								  },
+						error: ServiceFailed // When Service call fails
+					});
+				}
+				
 				//var bhRequest = "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">" +
 				//					"<s:Body>" +
 				//						"<GetData xmlns=\"http://tempuri.org/\">" +
@@ -19,11 +41,20 @@
 					//					alert('Received ' + data.length + ' Data');
 					//				});
 					debugger;
-					jQuery.getJSON('http://' + hostAddress + '/Customers.svc/getdata?id=1&callback=?',
-								   null,
-								   function(data) {
-								       alert('Received ' + data.length + ' Data');
-								   });
+					varType = "POST";
+					varUrl = "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/Service.svc/GetData";
+					//varData = '{"Country": "' + $('#ddlCountry').val() + '"}';
+					varData = '{"value": 10}';
+					varContentType = "application/json; charset=utf-8";
+					varDataType = "json"; 
+					varProcessData = true; 
+					CallService();
+					
+					//jQuery.getJSON('http://' + hostAddress + '/Customers.svc/getdata?id=1&callback=?',
+					//			   null,
+					//			   function(data) {
+					//			       alert('Received ' + data.length + ' Data');
+					//			   });
 					//debugger;
 					//jQuery.support.cors = true;
 					//$.ajax({
