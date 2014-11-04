@@ -28,7 +28,7 @@
 						//processdata: true,
 						beforeSend: function (xhr) {
 							xhr.withCredentials = false;
-							//xhr.setRequestHeader("SOAPAction", "http://tempuri.org/ILicenceService/GetData");
+							xhr.setRequestHeader("SOAPAction", "http://tempuri.org/ILicenceService/GetData");
 						},
 						success: function (data) {
 							debugger;
