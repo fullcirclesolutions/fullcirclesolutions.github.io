@@ -16,10 +16,10 @@
 				function CallService() {
 					$.ajax({
 						//type : varType, //GET or POST or PUT or DELETE verb
-						method: 'GET',
 						url : varUrl, // Location of the service
-						crossDomain: true,
-						headers : varHeaders,
+						method: 'GET',
+						//crossDomain: true,
+						//headers : varHeaders,
 						//data : varData, //Data sent to server
 						//data : null,
 						//contentType : varContentType, // content type sent to server
@@ -33,73 +33,20 @@
 					});
 				}
 				
-				//var bhRequest = "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">" +
-				//					"<s:Body>" +
-				//						"<GetData xmlns=\"http://tempuri.org/\">" +
-				//							"<value>10</value>" +
-				//						"</GetData>" +
-				//					"</s:Body>" +
-				//				"</s:Envelope>";
 				$("#btnEmailLicenceKey").click(function () {
-					//jQuery.getJSON('http://' + hostAddress + '/Service.svc/getdata?callback=?',
-					//			   '{ "value" : 10 }',
-					//				function(data) {
-					//					alert('Received ' + data.length + ' Data');
-					//				});
 					debugger;
 					//varType = "POST";
 					//http://localhost:50956/Service.svc/Data/?name=Andrew&value=20
 					//http://localhost:50956/Service.svc/EmailLicence/?name=Bob%20Smith&companyName=SomeCompany&emailTo=andrew.paul.gray@gmail.com&productCode=SauceryNUnit
 					//varUrl = "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/Service.svc/GetData/?name=Andrew&value=20";
-					varUrl = "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/Service.svc/EmailLicence/?name=Bob%20Smith&companyName=SomeCompany&emailTo=andrew.paul.gray@gmail.com&productCode=SauceryNUnit";
-					varHeaders= '{"Access-Control-Allow-Origin", "*", "Access-Control-Request-Method", "GET,POST,OPTIONS"}'
+					varUrl = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=Bob%20Smith&companyName=SomeCompany&emailTo=andrew.paul.gray@gmail.com&productCode=SauceryNUnit";
+					//varHeaders= '{"Access-Control-Allow-Origin", "*", "Access-Control-Request-Method", "GET,POST,OPTIONS"}'
 					//varData = '{"Country": "' + $('#ddlCountry').val() + '"}';
 					//varData = '{"value":"10"}';
-					varContentType = "application/json; charset=utf-8";
-					varDataType = "json"; 
-					varProcessData = true; 
+					//varContentType = "application/json; charset=utf-8";
+					//varDataType = "json"; 
+					//varProcessData = true; 
 					CallService();
-					
-					//jQuery.getJSON('http://' + hostAddress + '/Customers.svc/getdata?id=1&callback=?',
-					//			   null,
-					//			   function(data) {
-					//			       alert('Received ' + data.length + ' Data');
-					//			   });
-					//debugger;
-					//jQuery.support.cors = true;
-					//$.ajax({
-					//	type: "POST",
-					//	url: "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/Service.svc",
-					//	//data: '{"value": "' + 10 + '"}',
-					//	data: bhRequest,
-					//	timeout: 10000,
-					//	//contentType: "application/json; charset=utf-8",
-					//	//contentType: "application/json",
-					//	//dataType: "json",
-					//	contentType: "text/xml",
-					//	dataType: "xml",
-					//	//processdata: true,
-					//	beforeSend: function (xhr) {
-					//		xhr.withCredentials = false;
-					//		xhr.setRequestHeader("SOAPAction", "http://tempuri.org/IService/GetData");
-					//	},
-					//	success: function (data) {
-					//		debugger;
-					//		$(data).find("GetDataResponse").each(function () {
-					//			alert($(this).find("GetDataResult").text());
-					//		});
-							//if (DataType == "jsonp") {
-							
-							//	resultObject = result.GetDataResult;
-							//	for (i = 0; i < resultObject.length; i++) {
-							//		alert(resultObject[i]);
-							//	}
-							//}
-					//	},
-					//	error: function (xhr, status, error) {
-					//		alert(error);
-					//	}
-					//});
 				});
 			});
 		</script>
