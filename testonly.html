@@ -18,8 +18,9 @@
 						url: "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/LicenceService.svc",
 						data: bhRequest,
 						timeout: 10000,
-						contentType: "text/xml",
+						contentType: "application/soap+xml",
 						dataType: "xml",
+						async: "false",
 						beforeSend: function (xhr) {
 							xhr.setRequestHeader("SOAPAction", "http://tempuri.org/ILicence/GetData");
 						},
