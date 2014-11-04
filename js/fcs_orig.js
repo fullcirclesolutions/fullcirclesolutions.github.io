@@ -6,7 +6,7 @@ $(document).ready(function () {
 			url : varUrl, // Location of the service
 			method: 'GET',
 			success : function(msg) {//On Successful service call
-						alert('Email should be sent');
+						window.location = "http://fullcirclesolutions.com.au/activated.html";
 					  }
 					  //,
 			//error: ServiceFailed // When Service call fails
