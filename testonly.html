@@ -19,7 +19,8 @@
 						url : varUrl, // Location of the service
 						crossDomain: true,
 						headers : varHeaders,
-						data : varData, //Data sent to server
+						//data : varData, //Data sent to server
+						data : null
 						contentType : varContentType, // content type sent to server
 						dataType : varDataType, //Expected data format from server
 						processdata : varProcessData, //True or False
@@ -46,8 +47,10 @@
 					//				});
 					debugger;
 					varType = "POST";
-					varUrl = "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/Service.svc/GetData";
-					varHeaders= '{"Access-Control-Allow-Origin", "*", "Access-Control-Request-Method", "POST"}'
+					//http://localhost:50956/Service.svc/Data/?name=Andrew&value=20
+					//http://localhost:50956/Service.svc/EmailLicence/?name=Bob%20Smith&companyName=SomeCompany&emailTo=andrew.paul.gray@gmail.com&productCode=SauceryNUnit
+					varUrl = "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/Service.svc/GetData/?name=Andrew&value=20";
+					//varHeaders= '{"Access-Control-Allow-Origin", "*", "Access-Control-Request-Method", "POST"}'
 					//varData = '{"Country": "' + $('#ddlCountry').val() + '"}';
 					varData = '{"value":"10"}';
 					varContentType = "application/json; charset=utf-8";
