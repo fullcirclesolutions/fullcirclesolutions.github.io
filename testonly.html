@@ -5,14 +5,7 @@
 		<script type="text/javascript">
 			var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
 			$(document).ready(function () {
-				var varType;
-				var varUrl;
-				var varHeaders;
-				var varData;
-				var varContentType;
-				var varDataType;
-				var varProcessData; 
-
+				var varUrl; 
 				function CallService() {
 					$.ajax({
 						url : varUrl, // Location of the service
@@ -27,10 +20,6 @@
 				
 				$("#btnEmailLicenceKey").click(function () {
 					debugger;
-					//http://localhost:50956/Service.svc/Data/?name=Andrew&value=20
-					//http://localhost:50956/Service.svc/EmailLicence/?name=Bob%20Smith&companyName=SomeCompany&emailTo=andrew.paul.gray@gmail.com&productCode=SauceryNUnit
-					//varUrl = "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/Service.svc/GetData/?name=Andrew&value=20";
-					//varUrl = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=Bob%20Smith&companyName=SomeCompany&emailTo=andrew.paul.gray@gmail.com&productCode=SauceryNUnit";
 					varUrl = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + $('#name').val() + "&companyName=" + $('#compname').val() + "&emailTo=" + $('#email').val() + "&productCode=SauceryNUnit";
 					CallService();
 				});
