@@ -16,6 +16,7 @@
 					$.ajax({
 						type : varType, //GET or POST or PUT or DELETE verb
 						url : varUrl, // Location of the service
+						headers : {"Access-Control-Allow-Origin", "*", "Access-Control-Request-Method" , "POST"},
 						data : varData, //Data sent to server
 						contentType : varContentType, // content type sent to server
 						dataType : varDataType, //Expected data format from server
