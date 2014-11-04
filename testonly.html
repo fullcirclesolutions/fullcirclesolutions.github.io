@@ -16,6 +16,7 @@
 					$.ajax({
 						type : varType, //GET or POST or PUT or DELETE verb
 						url : varUrl, // Location of the service
+						crossDomain: true,
 						headers : {"Access-Control-Allow-Origin", "*", "Access-Control-Request-Method" , "POST"},
 						data : varData, //Data sent to server
 						contentType : varContentType, // content type sent to server
@@ -46,7 +47,7 @@
 					varType = "POST";
 					varUrl = "http://847055f0c7ed496490d0d5a13a805d55.cloudapp.net/Service.svc/GetData";
 					//varData = '{"Country": "' + $('#ddlCountry').val() + '"}';
-					varData = '{"value": 10}';
+					varData = '{"value":"10"}';
 					varContentType = "application/json; charset=utf-8";
 					varDataType = "json"; 
 					varProcessData = true; 
