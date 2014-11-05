@@ -1,6 +1,6 @@
 var ref = document.referrer;
 if (ref.match(/^https?:\/\/([^\/]+\.)?paypal\.com(\/|$)/i)) {
-	alert("Came from paypal");
-}else{
-	alert("Not from paypal");
+	alert("Came from paypal: " + ref);
+} else {
+	alert("Not from paypal: " + ref);
 }
