@@ -5,11 +5,12 @@ $(document).ready(function () {
 		$.ajax({
 			url : varUrl, // Location of the service
 			method: 'GET',
-			success : function(msg) {//On Successful service call
+			success : function(msg) { //On Successful service call
 						window.location = "http://fullcirclesolutions.com.au/activated.html";
-					  }
-					  //,
-			//error: ServiceFailed // When Service call fails
+					  },
+			error: function(msg) { // When Service call fails
+						window.location = "http://fullcirclesolutions.com.au/thankyou-gateway.html";
+					  } 
 		});
 	}
 	
