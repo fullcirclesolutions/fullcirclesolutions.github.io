@@ -1,4 +1,4 @@
-var ref = document.history(-1);
+var ref = document.referrer.toLowerCase();
 if (ref.match(/^https?:\/\/([^\/]+\.)?paypal\.com(\/|$)/i)) {
 	alert("Came from paypal: " + ref);
 } else {
