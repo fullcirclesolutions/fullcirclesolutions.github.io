@@ -1,14 +1,5 @@
 var ref = document.referrer.toLowerCase();
-if (ref.match(/^https?:\/\/([^\/]+\.)?paypal\.com(\/|$)/i)) {
-	alert("Came from paypal: " + ref);
-} else {
-	alert("Not from paypal: " + ref);
+if (ref.indexOf("checkout-gateway.html") == -1) {
+	alert("didnt come through the right door: ");
 	window.location.href = "http://fullcirclesolutions.com.au"
-}
-
-if(ref == null){
-	alert("ref is null");
-}
-if(ref == ''){
-	alert("ref is empty");
 }
