@@ -1,3 +1,8 @@
 User-agent: *
 Disallow: /update-center/
+Disallow: /js/
+Disallow: /_layouts/
+Disallow: /_includes/
+Disallow: /fonts/
+Disallow: /*/*-gateway.html
 sitemap: http://fullcirclesolutions.com.au/Sitemap.xml
