@@ -7,8 +7,8 @@ if (ref.match(/^https?:\/\/([^\/]+\.)?paypal\.com(\/|$)/i)) {
 }
 
 if(ref == null){
-alert("ref is null");
+	alert("ref is null");
 }
 if(ref == ''){
-alert("ref is empty");
+	alert("ref is empty");
 }
