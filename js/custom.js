@@ -144,6 +144,20 @@ function backgroundSlideshow () {
           duration: 5000,
           fade: 800,
      });
+}
 
+function productBackgroundSlideshow () {
 
+	//src: https://github.com/srobbin/jquery-backstretch
+	  $('header').backstretch([
+          '../images/bg-slider/1.jpg',
+		  '../images/bg-slider/2.jpg',
+          '../images/bg-slider/3.jpg',
+		  '../images/bg-slider/4.jpg',
+		  '../images/bg-slider/5.jpg'
+        ], {
+          duration: 5000,
+          duration: 5000,
+          fade: 800,
+     });
 }
