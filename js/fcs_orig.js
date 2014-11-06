@@ -6,10 +6,10 @@ $(document).ready(function () {
 			url : varUrl, // Location of the service
 			method: 'GET',
 			success : function(msg) { //On Successful service call
-						window.location = "http://fullcirclesolutions.com.au/activated.html";
+						window.location = "../activated.html";
 					  },
 			error: function(msg) { // When Service call fails
-						window.location = "http://fullcirclesolutions.com.au/thankyou-gateway.html";
+						window.location = "../buy.html";
 					  } 
 		});
 	}
