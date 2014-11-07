@@ -61,9 +61,15 @@
 	</script>
 	<script>
 		$(document).ready(function() {
-			$("#btnEmailLicenceKey").click({name: $('#name').val(),
-											company: $('#company').val(),
-											email: $('#email').val(),
+			var nameVal = $('#name').val();
+			var companyVal = $('#company').val();
+			var emailVal = $('#email').val();
+			alert("nameVal=" + nameVal);
+			alert("companyVal=" + companyVal);
+			alert("emailVal=" + emailVal);
+			$("#btnEmailLicenceKey").click({name: nameVal,
+											company: companyVal,
+											email: emailVal,
 											product: "SauceryNUnit"}, do_it);
 		});
 	</script>
