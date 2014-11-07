@@ -1,17 +1,10 @@
 function do_it(event) {
-	alert("here");
-	//alert(event.data.name);
-	//alert(event.data.company);
-	//alert(event.data.email);
-	//alert(event.data.product);
-	nameVal = $('#name').val();
-	companyVal = $('#company').val();
-	emailVal = $('#email').val();
-	alert("nameVal INSIDE=" + nameVal);
-	alert("companyVal INSIDE=" + companyVal);
-	alert("emailVal INSIDE=" + emailVal);
+	alert("name INSIDE=" + $('#name').val());
+	alert("company INSIDE=" + $('#company').val());
+	alert("email INSIDE=" + $('#email').val());
+	alert("product INSIDE=" + event.data.product);
 	var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
-	var url = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + event.data.name + "&companyName=" + event.data.company + "&emailTo=" + event.data.email + "&productCode=" + event.data.product;
+	var url = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + $('#name').val() + "&companyName=" + $('#company').val() + "&emailTo=" + $('#email').val() + "&productCode=" + event.data.product;
 	$.ajax({
 		url : url,
 		method: 'GET',
