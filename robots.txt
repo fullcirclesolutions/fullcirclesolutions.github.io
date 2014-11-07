@@ -4,5 +4,7 @@ Disallow: /js/
 Disallow: /_layouts/
 Disallow: /_includes/
 Disallow: /fonts/
-Disallow: /*/*-gateway.html
+Disallow: /saucerynunit/5ff4adab-3ef9-4788-b655-8c874cedfcb1.html
+Disallow: /*/thankyou.html
+Disallow: /*/activation.html
 sitemap: http://fullcirclesolutions.com.au/Sitemap.xml
