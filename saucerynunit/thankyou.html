@@ -64,16 +64,7 @@
 		var companyVal;
 		var emailVal;
 		$(document).ready(function() {
-			alert("nameVal BEFORE=" + nameVal);
-			alert("companyVal BEFORE=" + companyVal);
-			alert("emailVal BEFORE=" + emailVal);
-			$("#btnEmailLicenceKey").click(	nameVal = $('#name').val();
-											companyVal = $('#company').val();
-											emailVal = $('#email').val();
-											alert("nameVal AFTER=" + nameVal);
-											alert("companyVal AFTER=" + companyVal);
-											alert("emailVal AFTER=" + emailVal);
-											{name: nameVal,
+			$("#btnEmailLicenceKey").click({name: nameVal,
 											company: companyVal,
 											email: emailVal,
 											product: "SauceryNUnit"}, do_it);
