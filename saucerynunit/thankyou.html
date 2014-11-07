@@ -60,10 +60,12 @@
 		})();
 	</script>
 	<script>
-		$("#btnEmailLicenceKey").click({name: $('#name').val(),
-										company: $('#company').val(),
-										email: $('#email').val(),
-										product: "SauceryNUnit"}, do_it);
+		$( document ).ready(function() {
+			$("#btnEmailLicenceKey").click({name: $('#name').val(),
+											company: $('#company').val(),
+											email: $('#email').val(),
+											product: "SauceryNUnit"}, do_it);
+		});
 	</script>
 </head>
 <body>
