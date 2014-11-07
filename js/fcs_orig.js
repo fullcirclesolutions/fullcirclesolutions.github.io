@@ -15,7 +15,7 @@ $(document).ready(function () {
 	}
 	
 	$("#btnEmailLicenceKey").click(function () {
-		varUrl = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + $('#name').val() + "&companyName=" + $('#compname').val() + "&emailTo=" + $('#email').val() + "&productCode=SauceryNUnit";
+		varUrl = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + $('#name').val() + "&companyName=" + $('#company').val() + "&emailTo=" + $('#email').val() + "&productCode=SauceryNUnit";
 		CallService();
 	});
 });
