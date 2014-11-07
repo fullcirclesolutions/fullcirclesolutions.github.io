@@ -1,6 +1,6 @@
 function do_it(event) {
 	var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
-	var url = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + $('#name').val() + "&companyName=" + $('#company').val() + "&emailTo=" + $('#email').val() + "&productCode=" + event.data.product;
+	var url = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + event.data.name + "&companyName=" + event.data.company + "&emailTo=" + event.data.email + "&productCode=" + event.data.product;
 	$.ajax({
 		url : url,
 		method: 'GET',
