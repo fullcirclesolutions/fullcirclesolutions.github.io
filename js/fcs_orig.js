@@ -6,7 +6,7 @@ $(document).ready(function () {
 			url : varUrl, // Location of the service
 			method: 'GET',
 			success : function(msg) { //On Successful service call
-						window.location = "activated.html";
+						window.location = "activation.html";
 					  },
 			error: function(msg) { // When Service call fails
 						window.location = "buy.html";
