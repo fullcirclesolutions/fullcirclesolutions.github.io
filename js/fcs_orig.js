@@ -1,4 +1,9 @@
 function do_it(event) {
+	alert("here");
+	alert(event.data.name);
+	alert(event.data.company);
+	alert(event.data.email);
+	alert(event.data.product);
 	var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
 	var url = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + event.data.name + "&companyName=" + event.data.company + "&emailTo=" + event.data.email + "&productCode=" + event.data.product;
 	$.ajax({
