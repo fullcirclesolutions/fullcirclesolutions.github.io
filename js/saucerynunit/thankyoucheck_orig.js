@@ -8,15 +8,16 @@ function doCheck(){
         $('input[type=text]').each(function(){
             if($(this).val() == ''){
                 allFilled = false;
-				alert('Returning false');
                 return false;
             }
         });
-		alert('allFilled' + allFilled);
+		alert('allFilled: ' + allFilled);
+		alert('!allFilled: ' + !allFilled);
         $('input[type=submit]').prop('disabled', !allFilled);
+		alert($('input[type=submit]').attr('disabled'));
 }
 
 $(document).ready(function(){
-	alert($('input[type=text]').length);
+	alert('Num submits=' + $('input[type=submit]').length);
     $('input[type=text]').keyup(doCheck).focusout(doCheck);
 });
