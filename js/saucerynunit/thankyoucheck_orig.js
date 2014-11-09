@@ -11,13 +11,9 @@ function doCheck(){
                 return false;
             }
         });
-		alert('allFilled: ' + allFilled);
-		alert('!allFilled: ' + !allFilled);
         $('input[type=submit]').prop('disabled', !allFilled);
-		alert($('input[type=submit]').attr('disabled'));
 }
 
 $(document).ready(function(){
-	alert('Num submits=' + $('input[type=submit]').length);
-    $('input[type=text]').keyup(doCheck).focusout(doCheck);
+	$('input[type=text]').keyup(doCheck).focusout(doCheck);
 });
