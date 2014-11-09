@@ -7,10 +7,16 @@
 		{% include script-rels.html %}
 	</head>
 	<body>
+		{% include topmenu.html %}
+		{{ content }}
+		{% include footer.html %}
+	</body>
+	
+	<!--<body>
 		<div class="DivCentrePage">
 			{% include banner.html %}
 			{{ content }}
 			{% include Copyright.html %}
 		</div>
-	</body>
+	</body>-->
 </html>
