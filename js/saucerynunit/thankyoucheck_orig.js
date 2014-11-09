@@ -8,12 +8,15 @@ function doCheck(){
         $('input[type=text]').each(function(){
             if($(this).val() == ''){
                 allFilled = false;
+				alert('Returning false');
                 return false;
             }
         });
+		alert('allFilled' + allFilled);
         $('input[type=submit]').prop('disabled', !allFilled);
 }
 
 $(document).ready(function(){
+	alert($('input[type=text]').length);
     $('input[type=text]').keyup(doCheck).focusout(doCheck);
 });
