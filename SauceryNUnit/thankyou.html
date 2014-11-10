@@ -61,9 +61,14 @@
 	</script>
 	<script type="text/javascript">
 		$(document).ready(function() {
+			var client_ip; $.getJSON("http://jsonip.com?callback=?", function (data) {
+										client_ip = data.ip;
+									});
 			$("#btnEmailLicenceKey").click({product: "SauceryNUnit"}, do_it);
+			$("#something").click({ip: client_ip,challenge: $("#recaptcha_challenge_field").val(),response: $("#recaptcha_response_field").val()}, validate_captcha);
 		});
 	</script>
+	<script type="text/javascript" src="http://api.recaptcha.net/js/recaptcha_ajax.js"></script> 
 </head>
 <body>
 	<!-- header starts -->
@@ -87,7 +92,7 @@
 						<div class="slogan wow fadeInLeft">
 							<!-- <h2>Effective to <span>start</span></h2> -->
 							<h2>Please take a moment to acquire your activation key.</h2>
-							<div class="contact-form">
+							<!--<div class="contact-form">
 								<form role='form'>
 									<div class="form wow zoomIn" data-wow-delay='0.5s'>
 										<div class="form-group row">
@@ -105,10 +110,10 @@
 				    					</div>
 									</div>
 								</form>
-							</div>
+							</div>-->
 							
 							<!--ReCapture HERE-->
-							
+							<div id="recaptcha_div"></div>
 							
 							<label>NOTE: You will need to re-enter the details you enter here into the Activation Dialog exactly, to complete activation.</label>
 							<br>

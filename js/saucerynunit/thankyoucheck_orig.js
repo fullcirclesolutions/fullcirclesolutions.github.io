@@ -15,5 +15,25 @@ function doCheck(){
 }
 
 $(document).ready(function(){
+	Recaptcha.create("6LcbcP0SAAAAAOpl10xbPyzgTxUDJJcMZBq0j4ny",
+					"recaptcha_div", {
+                    theme: "clean",
+                    callback: Recaptcha.focus_response_field
+               });
 	$('input[type=text]').keyup(doCheck).focusout(doCheck);
 });
+
+function validate_captcha(event) {
+	var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
+	var url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + event.data.ip + "&challenge=" + $('#').val() + "&response=" + $('#').val();
+	$.ajax({
+		url : url,
+		method: 'GET',
+		success : function(data) { //On Successful service call
+					debugger;
+				  },
+		error: function(data) { // When Service call fails
+					debugger;
+				  }
+	});
+}
