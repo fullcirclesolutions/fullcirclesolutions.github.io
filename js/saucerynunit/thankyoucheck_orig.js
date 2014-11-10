@@ -11,6 +11,10 @@ function doCheck(){
                 return false;
             }
         });
+		if($("#recaptcha_response_field").val() == ''){
+			allFilled = false;
+            return false;
+		}
         $('input[type=submit]').prop('disabled', !allFilled);
 }
 
@@ -21,6 +25,7 @@ $(document).ready(function(){
                     callback: Recaptcha.focus_response_field
                });
 	$('input[type=text]').keyup(doCheck).focusout(doCheck);
+	$("#recaptcha_response_field").keyup(doCheck).focusout(doCheck);
 });
 
 function validate_captcha(event) {
