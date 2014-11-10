@@ -48,8 +48,12 @@
 				return;
 			} else {
 				var validCaptcha = false;
+				var client_ip;
 				debugger;
-				var url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + event.data.ip + "&challenge=" + $('#recaptcha_challenge_field').val() + "&response=" + $('#recaptcha_response_field').val();
+				$.getJSON("http://jsonip.com?callback=?", function (data) {
+								client_ip = data.ip;
+							});
+				var url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + client_ip + "&challenge=" + $('#recaptcha_challenge_field').val() + "&response=" + $('#recaptcha_response_field').val();
 					debugger;
 					$.ajax({
 						url : url,
@@ -79,7 +83,6 @@
 			}
 		}
 	</script>
-	
 	
 	<!--<script type="text/javascript" src="../js/saucerynunit/thankyoucheck.js"></script>-->	
 	<script type="text/javascript">
@@ -145,7 +148,6 @@
 										client_ip = data.ip;
 									});
 			$("#btnEmailLicenceKey").click({product: "SauceryNUnit"}, do_it);
-			//$("#something").click({ip: client_ip,challenge: $("#recaptcha_challenge_field").val(),response: $("#recaptcha_response_field").val()}, validateCaptcha);
 		});
 	</script>
 </head>
