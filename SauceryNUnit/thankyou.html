@@ -38,7 +38,67 @@
 
 	<script type="text/javascript" src="../assets/plugins/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="../js/fcs.js"></script>
-	<script type="text/javascript" src="../js/saucerynunit/thankyoucheck.js"></script>
+	
+	<!--<script type="text/javascript" src="../js/saucerynunit/thankyoucheck.js"></script>-->	
+	<script type="text/javascript">
+		var ref = document.referrer.toLowerCase();
+		if (ref.indexOf("5ff4adab-3ef9-4788-b655-8c874cedfcb1.html") == -1) {
+			window.location.href = "home.html"
+		}
+
+		function doCheck(){
+				var allFilled = true;
+				$('input[type=text]').each(function(){
+					if($(this).val() == ''){
+						allFilled = false;
+						return false;
+					}
+				});
+				debugger;
+				$('input[type=submit]').prop('disabled', !allFilled);
+		}
+
+		$(document).ready(function(){
+			Recaptcha.create("6LcbcP0SAAAAAOpl10xbPyzgTxUDJJcMZBq0j4ny",
+							"recaptcha_div", {
+							theme: "clean",
+							callback: Recaptcha.focus_response_field
+					   });
+			debugger;
+			$('input[type=text]').keyup(doCheck).focusout(doCheck);
+		});
+
+		function check_captcha() {
+			debugger;
+			var v = $('#recaptcha_response_field').val();
+			if (v == '' || v == undefined) {
+				alert('Captcha is required');
+				return false;
+			}
+			return true;
+		}
+
+		function validate_captcha(event) {
+			debugger;
+			var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
+			var url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + event.data.ip + "&challenge=" + $('#').val() + "&response=" + $('#').val();
+			$.ajax({
+				url : url,
+				method: 'GET',
+				success : function(data) { //On Successful service call
+							debugger;
+						  },
+				error: function(data) { // When Service call fails
+							debugger;
+						  }
+			});
+		}
+	</script>
+	
+	
+	
+	
+	
 	<script src="http://www.google-analytics.com/ga.js" type="text/javascript" async=""></script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
