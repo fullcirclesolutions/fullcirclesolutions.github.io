@@ -67,15 +67,14 @@
 			$('input[type=text][name$="-field"]').keyup(doCheck).focusout(doCheck);
 		});
 
-		function checkCaptcha() {
-			debugger;
-			var v = $('#recaptcha_response_field').val();
-			if (v == '' || v == undefined) {
-				alert('Captcha is required');
-				return false;
-			}
-			return true;
-		}
+		//function checkCaptcha() {
+		//	debugger;
+		//	var v = $('#recaptcha_response_field').val();
+		//	if (v == '' || v == undefined) {
+		//		return false;
+		//	}
+		//	return true;
+		//}
 
 		function validateCaptcha(event) {
 			debugger;
@@ -177,7 +176,7 @@
 							<br>
 							<br>
 							<!--Make this button active on all 3 fields populated and ReCapture successful-->
-							<input id="btnEmailLicenceKey" value="Get My Activation Key" type="submit" class="form-control btn btn-primary" style="margin-top: 24px;width: 280px;" disabled="true" onclick="checkCaptcha();"/>
+							<input id="btnEmailLicenceKey" value="Get My Activation Key" type="submit" class="form-control btn btn-primary" style="margin-top: 24px;width: 280px;" disabled="true"/>
 						</div>
 					</div>
 				</div>
