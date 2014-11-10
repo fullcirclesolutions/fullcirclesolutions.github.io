@@ -84,8 +84,7 @@
 	
 	<!--<script type="text/javascript" src="../js/saucerynunit/thankyoucheck.js"></script>-->	
 	<script type="text/javascript">
-		var ref = document.referrer.toLowerCase();
-		var client_ip
+		var ref = document.referrer.toLowerCase();\
 		if (ref.indexOf("5ff4adab-3ef9-4788-b655-8c874cedfcb1.html") == -1) {
 			window.location.href = "home.html"
 		}
@@ -147,9 +146,11 @@
 	</script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			var client_ip; $.getJSON("http://jsonip.com?callback=?", function (data) {
+			$.ajaxSetup( { "async": false } );
+			var client_ip = $.getJSON("http://jsonip.com?callback=?", function (data) {
 										client_ip = data.ip;
 									});
+			$.ajaxSetup( { "async": true } );
 			$("#btnEmailLicenceKey").click({product: "SauceryNUnit",ip: client_ip}, do_it);
 		});
 	</script>
