@@ -58,9 +58,10 @@
 					$.ajax({
 						url : url,
 						method: 'GET',
-						success : function(data) { //On Successful service call
+						dataType: "xml"
+						success : function(xml) { //On Successful service call
 									debugger;
-									validCaptcha = data;
+									validCaptcha = $(xml);
 								  },
 						error: function(data) { // When Service call fails
 									debugger;
