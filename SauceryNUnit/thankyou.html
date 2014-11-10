@@ -48,17 +48,17 @@
 				return;
 			} else {
 				var validCaptcha = false;
-				$.ajaxSetup( { "async": false } );
-				var client_ip;
-				debugger;
-				$.getJSON("http://jsonip.com?callback=?", function (data) {
-											client_ip = data.ip;
-										});
-				debugger;
-				$.ajaxSetup( { "async": true } );
+				//$.ajaxSetup( { "async": false } );
+				//var client_ip;
+				//debugger;
+				//$.getJSON("http://jsonip.com?callback=?", function (data) {
+				//							client_ip = data.ip;
+				//						});
+				//debugger;
+				//$.ajaxSetup( { "async": true } );
 				var url;
 				debugger;
-				url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + event.data.ip + "&challenge=" + $('#recaptcha_challenge_field').val() + "&response=" + $('#recaptcha_response_field').val();
+				url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=127.0.0.1&challenge=" + $('#recaptcha_challenge_field').val() + "&response=" + $('#recaptcha_response_field').val();
 				$.ajax({
 					url : url,
 					method: 'GET',
