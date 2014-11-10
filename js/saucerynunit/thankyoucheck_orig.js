@@ -11,6 +11,7 @@ function doCheck(){
                 return false;
             }
         });
+		debugger;
         $('input[type=submit]').prop('disabled', !allFilled);
 }
 
@@ -20,10 +21,12 @@ $(document).ready(function(){
                     theme: "clean",
                     callback: Recaptcha.focus_response_field
                });
+    debugger;
 	$('input[type=text]').keyup(doCheck).focusout(doCheck);
 });
 
 function check_captcha() {
+	debugger;
 	var v = $('#recaptcha_response_field').val();
 	if (v == '' || v == undefined) {
 		alert('Captcha is required');
@@ -33,6 +36,7 @@ function check_captcha() {
 }
 
 function validate_captcha(event) {
+	debugger;
 	var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
 	var url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + event.data.ip + "&challenge=" + $('#').val() + "&response=" + $('#').val();
 	$.ajax({
