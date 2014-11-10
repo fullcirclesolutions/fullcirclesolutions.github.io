@@ -65,27 +65,33 @@
 					dataType: 'xml',
 					success : function(xml) { //On Successful service call
 								debugger;
-								validCaptcha = $(xml);
+								validCaptcha = xml.children[0];
+								if(validCaptcha == '<boolean xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</boolean>') {
+									sendEmail(event);
+								}
 							  },
 					error: function(data) { // When Service call fails
 								debugger;
 								validCaptcha = false;
 							  }
 				});		
-				if(validCaptcha){
-					var url = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + $('#name').val() + "&companyName=" + $('#company').val() + "&emailTo=" + $('#email').val() + "&productCode=" + event.data.product;
-					$.ajax({
-						url : url,
-						method: 'GET',
-						success : function(msg) { //On Successful service call
-									window.location = "activation.html";
-								  },
-						error: function(msg) { // When Service call fails
-									window.location = "home.html";
-								  }
-					});
-				}
+				
 			}
+		}
+		
+		function sendEmail(event){
+			var url = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + $('#name').val() + "&companyName=" + $('#company').val() + "&emailTo=" + $('#email').val() + "&productCode=" + event.data.product;
+			debugger;
+			$.ajax({
+				url : url,
+				method: 'GET',
+				success : function(msg) { //On Successful service call
+							window.location = "activation.html";
+						  },
+				error: function(msg) { // When Service call fails
+							window.location = "home.html";
+						  }
+			});
 		}
 	</script>
 	
