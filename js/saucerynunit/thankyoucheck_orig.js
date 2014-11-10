@@ -4,49 +4,31 @@ if (ref.indexOf("5ff4adab-3ef9-4788-b655-8c874cedfcb1.html") == -1) {
 }
 
 function doCheck(){
-        var allFilled = true;
-        $('input[type=text]').each(function(){
-            if($(this).val() == ''){
-                allFilled = false;
-                return false;
-            }
-        });
-		debugger;
-        $('input[type=submit]').prop('disabled', !allFilled);
+	var allFilled = true;
+	$('input[type=text][name$="-field"]').each(function(){
+		if($(this).val() == ''){
+			allFilled = false;
+			return false;
+		}
+	});
+	$('input[type=submit]').prop('disabled', !allFilled);
 }
 
 $(document).ready(function(){
 	Recaptcha.create("6LcbcP0SAAAAAOpl10xbPyzgTxUDJJcMZBq0j4ny",
 					"recaptcha_div", {
-                    theme: "clean",
-                    callback: Recaptcha.focus_response_field
-               });
-    debugger;
-	$('input[type=text]').keyup(doCheck).focusout(doCheck);
+					theme: "clean",
+					callback: Recaptcha.focus_response_field
+			   });
+	$('input[type=text][name$="-field"]').keyup(doCheck).focusout(doCheck);
 });
 
-function check_captcha() {
-	debugger;
+
+function checkCaptcha() {
 	var v = $('#recaptcha_response_field').val();
 	if (v == '' || v == undefined) {
 		alert('Captcha is required');
 		return false;
 	}
 	return true;
-}
-
-function validate_captcha(event) {
-	debugger;
-	var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
-	var url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + event.data.ip + "&challenge=" + $('#').val() + "&response=" + $('#').val();
-	$.ajax({
-		url : url,
-		method: 'GET',
-		success : function(data) { //On Successful service call
-					debugger;
-				  },
-		error: function(data) { // When Service call fails
-					debugger;
-				  }
-	});
 }
