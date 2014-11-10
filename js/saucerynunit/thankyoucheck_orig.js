@@ -11,10 +11,6 @@ function doCheck(){
                 return false;
             }
         });
-		if($("#recaptcha_response_field").val() == ''){
-			allFilled = false;
-            return false;
-		}
         $('input[type=submit]').prop('disabled', !allFilled);
 }
 
@@ -25,8 +21,16 @@ $(document).ready(function(){
                     callback: Recaptcha.focus_response_field
                });
 	$('input[type=text]').keyup(doCheck).focusout(doCheck);
-	$("#recaptcha_response_field").keyup(doCheck).focusout(doCheck);
 });
+
+function check_captcha() {
+	var v = $('#recaptcha_response_field').val();
+	if (v == '' || v == undefined) {
+		alert('Captcha is required');
+		return false;
+	}
+	return true;
+}
 
 function validate_captcha(event) {
 	var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
