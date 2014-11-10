@@ -48,7 +48,7 @@
 
 		function doCheck(){
 				var allFilled = true;
-				alert("in docheck: " + $('input[type=text][name$="field"]').length);
+				alert("in docheck: " + $('input[type=text][name$="-field"]').length);
 				$('input[type=text][name$="field"]').each(function(){
 					if($(this).val() == ''){
 						allFilled = false;
