@@ -49,11 +49,12 @@
 			} else {
 				var validCaptcha = false;
 				var client_ip;
+				var url;
 				debugger;
 				$.getJSON("http://jsonip.com?callback=?", function (data) {
 								client_ip = data.ip;
-							});
-				var url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + client_ip + "&challenge=" + $('#recaptcha_challenge_field').val() + "&response=" + $('#recaptcha_response_field').val();
+								url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + client_ip + "&challenge=" + $('#recaptcha_challenge_field').val() + "&response=" + $('#recaptcha_response_field').val();
+							});				
 					debugger;
 					$.ajax({
 						url : url,
