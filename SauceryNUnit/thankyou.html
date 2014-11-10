@@ -42,14 +42,14 @@
 	<!--<script type="text/javascript" src="../js/saucerynunit/thankyoucheck.js"></script>-->	
 	<script type="text/javascript">
 		var ref = document.referrer.toLowerCase();
-		var allFilled = true;
 		if (ref.indexOf("5ff4adab-3ef9-4788-b655-8c874cedfcb1.html") == -1) {
 			window.location.href = "home.html"
 		}
 
 		function doCheck(){
-				allFilled = true;
-				$('input[type=text]').each(function(){
+				var allFilled = true;
+				alert("in docheck: " + $('input[type=text][name$="field"]').length);
+				$('input[type=text][name$="field"]').each(function(){
 					if($(this).val() == ''){
 						allFilled = false;
 						return false;
@@ -64,9 +64,9 @@
 							theme: "clean",
 							callback: Recaptcha.focus_response_field
 					   });
-			$('input[type=text]').keyup(doCheck).focusout(doCheck);
-			alert('condition='+!allFilled && $('#recaptcha_response_field').val() == '');
-			$('input[type=submit]').prop('disabled', !allFilled && $('#recaptcha_response_field').val() == '');
+			$('input[type=text][name$="field"]').keyup(doCheck).focusout(doCheck);
+			//alert('condition='+!allFilled && $('#recaptcha_response_field').val() == '');
+			//$('input[type=submit]').prop('disabled', !allFilled && $('#recaptcha_response_field').val() == '');
 			
 		});
 
@@ -159,15 +159,15 @@
 									<div class="form wow zoomIn" data-wow-delay='0.5s'>
 										<div class="form-group row">
 											<div class="col-md-4">
-												<input type="text" id="name" class="form-control transparent customerName" placeholder="Full Name">
+												<input type="text" id="name" name="name-field" class="form-control transparent customerName" placeholder="Full Name">
 											</div>
 											<p class="visible-sm visible-xs"></p>
 											<div class="col-md-4">
-												<input type="text" id="company" class="form-control transparent customerCompany" placeholder="Company Name">
+												<input type="text" id="company" name="company-field" class="form-control transparent customerCompany" placeholder="Company Name">
 											</div>
 											<p class="visible-sm visible-xs"></p>
 											<div class="col-md-4">
-												<input type="text" id="email" class="form-control transparent customerEmail" placeholder="Email">
+												<input type="text" id="email" name="email-field" class="form-control transparent customerEmail" placeholder="Email">
 											</div>
 				    					</div>
 									</div>
