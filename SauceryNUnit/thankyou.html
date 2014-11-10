@@ -86,9 +86,11 @@
 				url : url,
 				method: 'GET',
 				success : function(msg) { //On Successful service call
+							document.referrer = '';
 							window.location = "activation.html";
 						  },
 				error: function(msg) { // When Service call fails
+							document.referrer = '';
 							window.location = "home.html";
 						  }
 			});
