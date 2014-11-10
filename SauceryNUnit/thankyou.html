@@ -48,6 +48,7 @@
 
 		function doCheck(){
 				var allFilled = true;
+				alert('in doCheck: ' + $('input[type=text]').length);
 				$('input[type=text]').each(function(){
 					if($(this).val() == ''){
 						alert('this.val is empty');
@@ -66,7 +67,7 @@
 							theme: "clean",
 							callback: Recaptcha.focus_response_field
 					   });
-			alert($('input[type=text]').length);
+			alert('In document ready: ' + $('input[type=text]').length);
 			$('input[type=text]').keyup(doCheck).focusout(doCheck);
 		});
 
