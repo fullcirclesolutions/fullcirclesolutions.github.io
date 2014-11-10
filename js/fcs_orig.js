@@ -5,8 +5,21 @@ function do_it(event) {
 		return;
 	} else {
 		var validCaptcha = false;
-		
-		
+		debugger;
+		var url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + event.data.ip + "&challenge=" + $('#recaptcha_challenge_field').val() + "&response=" + $('#recaptcha_response_field').val();
+			debugger;
+			$.ajax({
+				url : url,
+				method: 'GET',
+				success : function(data) { //On Successful service call
+							debugger;
+							validCaptcha = data;
+						  },
+				error: function(data) { // When Service call fails
+							debugger;
+							validCaptcha = false;
+						  }
+			});		
 		if(validCaptcha){
 			var url = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + $('#name').val() + "&companyName=" + $('#company').val() + "&emailTo=" + $('#email').val() + "&productCode=" + event.data.product;
 			$.ajax({

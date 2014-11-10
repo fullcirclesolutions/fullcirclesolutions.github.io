@@ -38,7 +38,48 @@
 
 	<script type="text/javascript" src="../assets/plugins/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
-	<script type="text/javascript" src="../js/fcs.js"></script>
+	
+	<!--<script type="text/javascript" src="../js/fcs.js"></script>-->
+	<script type="text/javascript">
+		function do_it(event) {
+			var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
+			
+			if($("#recaptcha_challenge_field").val() == '') {
+				return;
+			} else {
+				var validCaptcha = false;
+				debugger;
+				var url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + event.data.ip + "&challenge=" + $('#recaptcha_challenge_field').val() + "&response=" + $('#recaptcha_response_field').val();
+					debugger;
+					$.ajax({
+						url : url,
+						method: 'GET',
+						success : function(data) { //On Successful service call
+									debugger;
+									validCaptcha = data;
+								  },
+						error: function(data) { // When Service call fails
+									debugger;
+									validCaptcha = false;
+								  }
+					});		
+				if(validCaptcha){
+					var url = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + $('#name').val() + "&companyName=" + $('#company').val() + "&emailTo=" + $('#email').val() + "&productCode=" + event.data.product;
+					$.ajax({
+						url : url,
+						method: 'GET',
+						success : function(msg) { //On Successful service call
+									window.location = "activation.html";
+								  },
+						error: function(msg) { // When Service call fails
+									window.location = "home.html";
+								  }
+					});
+				}
+			}
+		}
+	</script>
+	
 	
 	<!--<script type="text/javascript" src="../js/saucerynunit/thankyoucheck.js"></script>-->	
 	<script type="text/javascript">
@@ -67,35 +108,16 @@
 			$('input[type=text][name$="-field"]').keyup(doCheck).focusout(doCheck);
 		});
 
-		//function checkCaptcha() {
-		//	debugger;
-		//	var v = $('#recaptcha_response_field').val();
-		//	if (v == '' || v == undefined) {
-		//		return false;
-		//	}
-		//	return true;
-		//}
-
-		function validateCaptcha(event) {
+		function checkCaptcha() {
 			debugger;
-			var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
-			var url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + event.data.ip + "&challenge=" + $('#').val() + "&response=" + $('#').val();
-			$.ajax({
-				url : url,
-				method: 'GET',
-				success : function(data) { //On Successful service call
-							debugger;
-						  },
-				error: function(data) { // When Service call fails
-							debugger;
-						  }
-			});
+			var v = $('#recaptcha_response_field').val();
+			if (v == '' || v == undefined) {
+				alert('Captcha is required');
+				return false;
+			}
+			return true;
 		}
 	</script>
-	
-	
-	
-	
 	
 	<script src="http://www.google-analytics.com/ga.js" type="text/javascript" async=""></script>
 	<script>
@@ -176,7 +198,7 @@
 							<br>
 							<br>
 							<!--Make this button active on all 3 fields populated and ReCapture successful-->
-							<input id="btnEmailLicenceKey" value="Get My Activation Key" type="submit" class="form-control btn btn-primary" style="margin-top: 24px;width: 280px;" disabled="true"/>
+							<input id="btnEmailLicenceKey" value="Get My Activation Key" type="submit" class="form-control btn btn-primary" style="margin-top: 24px;width: 280px;" disabled="true" onclick="checkCaptcha();"/>
 						</div>
 					</div>
 				</div>
