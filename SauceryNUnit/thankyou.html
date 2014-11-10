@@ -48,7 +48,14 @@
 				return;
 			} else {
 				var validCaptcha = false;
+				$.ajaxSetup( { "async": false } );
 				var client_ip;
+				debugger;
+				$.getJSON("http://jsonip.com?callback=?", function (data) {
+											client_ip = data.ip;
+										});
+				debugger;
+				$.ajaxSetup( { "async": true } );
 				var url;
 				debugger;
 				url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=" + event.data.ip + "&challenge=" + $('#recaptcha_challenge_field').val() + "&response=" + $('#recaptcha_response_field').val();
@@ -106,9 +113,6 @@
 							theme: "clean",
 							callback: Recaptcha.focus_response_field
 					   });
-			$.getJSON("http://jsonip.com?callback=?", function (data) {
-							client_ip = data.ip;
-						});
 			$('input[type=text][name$="-field"]').keyup(doCheck).focusout(doCheck);
 		});
 
@@ -146,12 +150,7 @@
 	</script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$.ajaxSetup( { "async": false } );
-			var client_ip = $.getJSON("http://jsonip.com?callback=?", function (data) {
-										client_ip = data.ip;
-									});
-			$.ajaxSetup( { "async": true } );
-			$("#btnEmailLicenceKey").click({product: "SauceryNUnit",ip: client_ip}, do_it);
+			$("#btnEmailLicenceKey").click({product: "SauceryNUnit"}, do_it);
 		});
 	</script>
 </head>
