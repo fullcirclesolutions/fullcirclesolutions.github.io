@@ -65,8 +65,9 @@
 					dataType: 'xml',
 					success : function(xml) { //On Successful service call
 								debugger;
-								validCaptcha = xml.children[0];
-								if(validCaptcha == '<boolean xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</boolean>') {
+								validCaptcha = xml.children[0].innerHTML;
+								if(validCaptcha != undefined && validCaptcha == 'true') {
+									debugger;
 									sendEmail(event);
 								}
 							  },
