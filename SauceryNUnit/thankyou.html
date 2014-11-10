@@ -42,20 +42,18 @@
 	<!--<script type="text/javascript" src="../js/saucerynunit/thankyoucheck.js"></script>-->	
 	<script type="text/javascript">
 		var ref = document.referrer.toLowerCase();
+		var allFilled = true;
 		if (ref.indexOf("5ff4adab-3ef9-4788-b655-8c874cedfcb1.html") == -1) {
 			window.location.href = "home.html"
 		}
 
 		function doCheck(){
-				var allFilled = true;
-				alert('in doCheck: ' + $('input[type=text]').length);
+				allFilled = true;
 				$('input[type=text]').each(function(){
 					if($(this).val() == ''){
-						alert('this.val is empty');
 						allFilled = false;
 						return false;
 					}
-					alert($(this).val());
 				});
 				$('input[type=submit]').prop('disabled', !allFilled);
 		}
@@ -66,9 +64,10 @@
 							theme: "clean",
 							callback: Recaptcha.focus_response_field
 					   });
-			alert('In document ready: ' + $('input[type=text]').length);
 			$('input[type=text]').keyup(doCheck).focusout(doCheck);
-			$('#recaptcha_response_field').keyup(doCheck).focusout(doCheck);
+			alert('condition='+!allFilled && $('#recaptcha_response_field').val() == '');
+			$('input[type=submit]').prop('disabled', !allFilled && $('#recaptcha_response_field').val() == '');
+			
 		});
 
 		function check_captcha() {
