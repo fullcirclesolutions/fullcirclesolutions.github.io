@@ -48,7 +48,6 @@
 
 		function doCheck(){
 				var allFilled = true;
-				alert("in docheck: " + $('input[type=text][name$="-field"]').length);
 				$('input[type=text][name$="-field"]').each(function(){
 					if($(this).val() == ''){
 						allFilled = false;
@@ -65,8 +64,6 @@
 							callback: Recaptcha.focus_response_field
 					   });
 			$('input[type=text][name$="-field"]').keyup(doCheck).focusout(doCheck);
-			//alert('condition='+!allFilled && $('#recaptcha_response_field').val() == '');
-			//$('input[type=submit]').prop('disabled', !allFilled && $('#recaptcha_response_field').val() == '');
 			
 		});
 
