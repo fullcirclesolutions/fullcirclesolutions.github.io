@@ -50,9 +50,11 @@
 				var allFilled = true;
 				$('input[type=text]').each(function(){
 					if($(this).val() == ''){
+						alert('this.val is empty');
 						allFilled = false;
 						return false;
 					}
+					alert($(this).val());
 				});
 				debugger;
 				$('input[type=submit]').prop('disabled', !allFilled);
