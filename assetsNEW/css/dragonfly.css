@@ -3644,8 +3644,11 @@ ul.thumbs {
 
 
 #map {
-  height: 300px;
-  width: 90%;
+  height: 450px;
+  width: 95%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 /* === Alerts === */
 .alert a {
