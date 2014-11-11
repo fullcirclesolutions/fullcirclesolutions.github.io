@@ -3620,6 +3620,12 @@ ul.thumbs {
   display: none;
 }
 /* === Google Maps === */
+.location {
+  position: relative;
+  height: 300px;
+  margin: 80px 0 100px 0;
+}
+
 .map-overlay {
   z-index: 99999;
   display: block;
