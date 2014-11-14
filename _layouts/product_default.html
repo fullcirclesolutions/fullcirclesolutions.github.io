@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> {{ page.title }} </title>
+		{% include meta-tags.html %}
+		{% include link-rels.html %}
+		{% include script-rels.html %}
+	</head>
+	<body>
+		{% include product-top-menu.html %}
+		{{ content }}
+		{% include footer.html %}
+	</body>
+</html>
