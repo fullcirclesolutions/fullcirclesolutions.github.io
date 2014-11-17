@@ -59,12 +59,22 @@ layout: default
 							<li>Add it to the class library project you created in step 1 above and click OK.  <strong>Note: Only one project is to reference Saucery in your solution. Otherwise Saucery will not work correctly</strong>.</li>
 						</ol>
 						
+						<h3>Activation</h3>
+						<ol class="primary">
+							<li>Upon installation (and every time you open the solution until it is activated), the activation dialog will appear.</li>
+							<li>If you have not already done so, purchase as activation key from the <a href="http://fullcirclesolutions.com.au">Full Circle</a> website.</li>
+							<li>Reenter the same details into the Activation dialog.  <strong>These details should be entered in exactly the same.</strong></li>
+							<li>Click OK.</li>
+							<li>If you entered the details correctly and validation was passed, a file called Saucery.lic will have been written to your solution directory.  Commit this file to source control as Saucery will be looking for it at runtime.</li>
+						</ol>
+						
 						<h3>First Look</h3>
 						<p>Let's have a look at what we have in the test project at this point.</p>
 						<p>Your project will have at least the following references:</p>
 						<p><img src="assetsNEW\img\howto_references.png" /></p>
 						<p>You should notice that Saucery, Newtonsoft.Json, nunit.framework, WebDriver and WebDriver.Support have been added along with a folder and class:</p>
 						<p><img src="assetsNEW\img\howto_addedclasses.png" /></p>
+						<p>It is recommended that you leave this GlobalSetup class in place as it will add some value adding message to your Jenkins console output. You may delete it if you like.</p>
 					</div>
 				</div>
 			</div>
