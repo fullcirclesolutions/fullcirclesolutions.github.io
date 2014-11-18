@@ -134,7 +134,7 @@ layout: default
 						
 						<h3>Configuring the Jenkins job</h3>
 						<p>All your selected platforms should be from the WebDriver radio list.  Saucery internally will specify Appium where it is the best option for the platform you selected as recommended by SsuceLabs.</p>
-						<p>Saucery providea a Page Object base class, called, as you might expect, PageObjectBase.  This class gives you a head-start on writing object that conform to the Page Object Model.  Let's look at a usage example.</p>
+						<p>Saucery provides a Page Object base class, called, as you might expect, PageObjectBase.  This class gives you a head-start on writing object that conform to the Page Object Model.  Let's look at a usage example.</p>
 						
 						<div class="space-sm"></div>
 						
@@ -148,7 +148,7 @@ layout: default
 							<pre><span class="lnum">   6:  </span><span class="kwrd">using</span> Saucery.Driver;</pre>
 							<pre><span class="lnum">   7:  </span><span class="kwrd">using</span> Saucery.PageObjects;</pre>
 							<pre><span class="lnum">   8:  </span>&nbsp;</pre>
-							<pre><span class="lnum">   9:  </span><span class="kwrd">namespace</span>  MyApp.MyAppTests.PageObjects {</pre>
+							<pre><span class="lnum">   9:  </span><span class="kwrd">namespace</span> MyApp.MyAppTests.PageObjects {</pre>
 							<pre><span class="lnum">  10:  </span>    <span class="kwrd">public</span> <span class="kwrd">class</span> <span class="class">AwesomePage</span> : <span class="class">PageObjectBase</span> {</pre>
 							<pre><span class="lnum">  11:  </span>        <span class="kwrd">public</span> VehiclePage(<span class="class">SauceryRemoteWebDriver</span> driver, <span class="class">String</span> urlRoot)</pre>
 							<pre><span class="lnum">  12:  </span>            : <span class="kwrd">base</span>(driver, urlRoot + <span class="str">"Awesome"</span>, <span class="str">"Awesome"</span>, <span class="str">"This is the Awesome Page Title"</span>) {</pre>
@@ -167,7 +167,42 @@ layout: default
 						
 						<div class="space-sm"></div>
 						
+						<p></p>
 						
+						<p>And using your new PageObject</p>
+						
+						<div class="space-sm"></div>
+						
+						<!-- code formatted by http://manoli.net/csharpformat/ -->
+						<div class="csharpcode">
+							<pre><span class="lnum">   1:  </span><span class="kwrd">using</span> MyApp.MyAppTests.PageObjects;</pre>
+							<pre><span class="lnum">   2:  </span><span class="kwrd">using</span> NUnit.Framework;</pre>
+							<pre><span class="lnum">   3:  </span><span class="kwrd">using</span> OpenQA.Selenium;</pre>
+							<pre><span class="lnum">   4:  </span><span class="kwrd">using</span> OpenQA.Selenium.Support.UI;</pre>
+							<pre><span class="lnum">   5:  </span><span class="kwrd">using</span> Saucery.Tests;</pre>
+							<pre><span class="lnum">   6:  </span><span class="kwrd">using</span> Saucery.ValueSources;</pre>
+							<pre><span class="lnum">   7:  </span><span class="kwrd">using</span> System;</pre>
+							<pre><span class="lnum">   8:  </span><span class="kwrd">using</span> System.Runtime.CompilerServices;</pre>
+							<pre><span class="lnum">   9:  </span> </pre>
+							<pre><span class="lnum">  10:  </span><span class="kwrd">namespace</span> MyApp.MyAppTests.Tests {</pre>
+							<pre><span class="lnum">  11:  </span>    <span class="kwrd">public</span> <span class="kwrd">class</span> MyTests : SauceryBase {</pre>
+							<pre><span class="lnum">  12:  </span>        [<span class="annotation">MethodImpl</span>(<span class="enum">MethodImplOptions</span>.Synchronized)]</pre>
+							<pre><span class="lnum">  13:  </span>        [<span class="annotation">Test</span>]</pre>
+							<pre><span class="lnum">  14:  </span>        <span class="kwrd">public</span> <span class="kwrd">void</span> <span class="class">MyFirstTest</span>([<span class="class">ValueSource</span>(<span class="kwrd">typeof</span>(<span class="class">PlatformTestData</span>), <span class="str">"GetPlatforms"</span>)] <span class="class">PlatformTestData</span> platform) {</pre>
+							<pre><span class="lnum">  15:  </span>            Setup(platform);</pre>
+							<pre><span class="lnum">  16:  </span>&nbsp;</pre>
+							<pre><span class="lnum">  17:  </span>            <span class="kwrd">var</span> awesomePage = <span class="kwrd">new</span> <span class="class">AwesomePage(Driver, <span class="class">Constants.TEST_URL);</pre>
+							<pre><span class="lnum">  18:  </span>            awesomePage.WaitForPageLoad(2);</pre>
+							<pre><span class="lnum">  19:  </span>            </pre>
+							<pre><span class="lnum">  20:  </span>            <span class="rem">//</span></pre>
+							<pre><span class="lnum">  21:  </span>            <span class="rem">// Insert your test code here</span></pre>
+							<pre><span class="lnum">  22:  </span>            <span class="rem">//</span></pre>
+							<pre><span class="lnum">  23:  </span>        }</pre>
+							<pre><span class="lnum">  24:  </span>    }</pre>
+							<pre><span class="lnum">  25:  </span>}</pre>
+						</div>
+						
+						<div class="space-sm"></div>
 						
 					</div>
 				</div>
