@@ -187,7 +187,7 @@ layout: default
 							<pre><span class="lnum">  14:  </span>        <span class="kwrd">public</span> <span class="kwrd">void</span> <span class="class">MyFirstTest</span>([<span class="class">ValueSource</span>(<span class="kwrd">typeof</span>(<span class="class">PlatformTestData</span>), <span class="str">"GetPlatforms"</span>)] <span class="class">PlatformTestData</span> platform) {</pre>
 							<pre><span class="lnum">  15:  </span>            Setup(platform);</pre>
 							<pre><span class="lnum">  16:  </span>&nbsp;</pre>
-							<pre><span class="lnum">  17:  </span>            <span class="kwrd">var</span> awesomePage = <span class="kwrd">new</span> <span class="class">AwesomePage(Driver, <span class="class">Constants.TEST_URL);</pre>
+							<pre><span class="lnum">  17:  </span>            <span class="kwrd">var</span> awesomePage = <span class="kwrd">new</span> <span class="class">AwesomePage</span>(Driver, <span class="class">Constants.TEST_URL</span>);</pre>
 							<pre><span class="lnum">  18:  </span>            awesomePage.WaitForPageLoad(2);</pre>
 							<pre><span class="lnum">  19:  </span>            </pre>
 							<pre><span class="lnum">  20:  </span>            <span class="rem">//</span></pre>
