@@ -1,25 +1,25 @@
 .csharpcode, .csharpcode pre
 {
 	font-size: small;
-	color: white;
+	color: #FFDCDCDC;
 	font-family: Consolas, "Courier New", Courier, Monospace;
-	background-color: black;
+	background-color: #FF1E1E1E;
 	/*white-space: pre;*/
 }
 
 .csharpcode pre { margin: 0em; }
 
-.csharpcode .rem { color: #008000; }
+.csharpcode .rem { color: #FF57A63A; }
 
-.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .kwrd { color: #FF3987D6; }
 
-.csharpcode .class { color: #2fe573; }
+.csharpcode .class { color: #FF45C999; }
 
-.csharpcode .annotation { color: #2fe573; }
+.csharpcode .annotation { color: #FF45C999; }
 
-.csharpcode .enum { color: #caee0f; }
+.csharpcode .enum { color: #FFB8D7A3; }
 
-.csharpcode .str { color: #a31515; }
+.csharpcode .str { color: #FFD69D73; }
 
 .csharpcode .op { color: #0000c0; }
 
