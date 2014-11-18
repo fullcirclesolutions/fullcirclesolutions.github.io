@@ -163,7 +163,15 @@ layout: default
 						
 						<div class="space-sm"></div>
 						
-						<p></p>
+						<p>So what's happening here.</p>
+						<ul class="primary">
+							<li>Line 10: Your testing your AwesomePage so you extend PageObjectBase.</li>
+							<li>Line 11: The constructor takes two parameters, a SauceryRemoteWebDriver and the root url of the domain you are testing (e.g http://fullcirclesolutions.com.au/).</li>
+							<li>Line 12: The parameters are used as part of the base constructor parameters: a SauceryRemoteWebDriver, the URL to this page (the page we want to test), a name, and the expected page title.</li>
+							<li>Line 13: This function asks selenium to request the page and wait for it to load.</li>
+							<li>Line 14: Assert that the Title of the page we are now on is that of the page we expect.</li>
+							<li>Line 15: This line is important and necessary if you decide to use a PageFactory class like <a href="http://relevantcodes.com/pageobjects-and-pagefactory-design-patterns-in-selenium/">this</a>.  There are other ways to do this which may make more sense (and result in cleaner code) for your application.  More on this later.</li>
+						</ul>
 						
 						<p>And using your new PageObject...</p>
 						
