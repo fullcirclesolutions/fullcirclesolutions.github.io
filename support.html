@@ -60,9 +60,85 @@ layout: default
                     <h2 class="text-uppercase m-no-all">How To</h2>
                 </div>
             </div>
+			
+			<div class="container">
+				<!-- Nav tabs -->
+				<ul class="fw-tabs">
+					<li class="active col-md-6">
+						<a href="#nunit" data-toggle="tab">
+							<i class="fa blue-i"><img src="images\SauceryNUnit.png" alt="Saucery for NUnit" height="50" width="50"></i>
+							<span>Saucery for NUnit</span>
+						</a>
+					</li>
+					<li class="col-md-6">
+						<a href="#junit"data-toggle="tab">
+							<i class="fa blue-i"><img src="images\SauceryJUnit.png" alt="Saucery for JUnit" height="50" width="50"></i>
+							<span>Saucery for JUnit</span>
+						</a>
+					</li>
+					<!--<li class="col-md-4">
+						<a href="#goals" data-toggle="tab">
+							<i class="fa blue-i fa-trophy"></i>
+							<span>Next product</span>
+						</a>
+					</li>-->
+				</ul>
 
-           
-
+				<div class="space-lg"></div>
+				<!-- Tab panes -->
+				<div class="tab-content text-left">
+					<div class="tab-pane active" id="nunit">
+						<div class="row">
+							<!--How to goes here-->
+							<div class="col-md-12 animated fadeInLeft">
+								<p>This guide aims to be a step by step guide to getting started with <a href="/SauceryNUnit/home.html" target="_blank">Saucery for NUnit</a>.  If you find anything confusing or unclear, please <a href="/contact.html" target="_blank">contact us</a> and we'll make the necessary updates.</p>
+								<p>Let's begin!</p>
+								
+								<h3>Installation</h3>
+								<ol class="primary">
+									<li>Create a class library project in Visual Studio.  It is recommended that this be part of your "System Under Test" solution.</li>
+									<li>Right-click and select <strong>Manage NuGet Packages for Solution...</strong></li>
+									<li>Search for <span>Saucery</span> in the Online section and click install</li>
+									<li>Add it to the class library project you created in step 1 above and click OK.  <strong>Note: Only one project is to reference Saucery in your solution. Otherwise Saucery will not work correctly</strong>.</li>
+								</ol>
+								
+								<h3>Activation</h3>
+								<ol class="primary">
+									<li>Upon installation (and every time you open the solution until it is activated), the activation dialog will appear.</li>
+									<li>If you have not already done so, purchase as activation key from the <a href="/" target="_blank">Full Circle</a> website.</li>
+									<li>Reenter the same details into the Activation dialog.  <strong>These details should be entered in exactly the same.</strong></li>
+									<li>Click OK.</li>
+									<li>If you entered the details correctly and validation was passed, a file called Saucery.lic will have been written to your solution directory.  Commit this file to source control as Saucery will be looking for it at runtime.</li>
+								</ol>
+								
+								<h3>First Look</h3>
+								<p>Let's have a look at what we have in the test project at this point.</p>
+								<p>Your project will have at least the following references:</p>
+								<p><img src="assetsNEW\img\howto_references.png" /></p>
+								<p>You should notice that Saucery, Newtonsoft.Json, nunit.framework, WebDriver and WebDriver.Support have been added along with a folder and class:</p>
+								<p><img src="assetsNEW\img\howto_addedclasses.png" /></p>
+								<p>It is recommended that you leave this GlobalSetup class in place as it will add some value adding messages to your Jenkins console output. You may delete it if you like.</p>
+								
+								<h3>Writing your tests</h3>
+								<p>Your test classes should be placed in the Tests directory and have the same namespace as GlobalSetup. Doing so will mean GlobalSetup execute once for your all your Test suites.</p>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="junit">
+						<div class="row">
+							<div class="col-md-6 animated fadeInLeft">
+								<h2>Coming Soon...</h2>
+								<p>Saucery for JUnit is coming soon.</p>
+							</div>
+							<div class="col-md-6">
+								<div class="text-center hidden-xs animated fadeInRight">
+									<canvas id="chart" width="450" height="250"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
         </div>
 		
 		<!-- CHANGE LOG PANE -->
