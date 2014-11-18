@@ -13,6 +13,12 @@
 
 .csharpcode .kwrd { color: #0000ff; }
 
+.csharpcode .class { color: #2fe573; }
+
+.csharpcode .annotation { color: #2fe573; }
+
+.csharpcode .enum { color: #caee0f; }
+
 .csharpcode .str { color: #a31515; }
 
 .csharpcode .op { color: #0000c0; }

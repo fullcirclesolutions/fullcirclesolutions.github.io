@@ -102,10 +102,10 @@ layout: default
 						<pre><span class="lnum">   7:  </span><span class="kwrd">using</span> System.Runtime.CompilerServices;</pre>
 						<pre><span class="lnum">   8:  </span>&nbsp;</pre>
 						<pre><span class="lnum">   9:  </span><span class="kwrd">namespace</span> MyApp.MyAppTests.Tests {</pre>
-						<pre><span class="lnum">  10:  </span>    <span class="kwrd">public</span> <span class="kwrd">class</span> MyTests : SauceryBase {</pre>
-						<pre><span class="lnum">  11:  </span>        [MethodImpl(MethodImplOptions.Synchronized)]</pre>
-						<pre><span class="lnum">  12:  </span>        [Test]</pre>
-						<pre><span class="lnum">  13:  </span>        <span class="kwrd">public</span> <span class="kwrd">void</span> MyFirstTest([ValueSource(<span class="kwrd">typeof</span>(PlatformTestData), <span class="str">"GetPlatforms"</span>)] PlatformTestData platform) {</pre>
+						<pre><span class="lnum">  10:  </span>    <span class="kwrd">public</span> <span class="kwrd">class</span> <span class="class">MyTests</span> : <span class="class">SauceryBase</span> {</pre>
+						<pre><span class="lnum">  11:  </span>        [<span class="annotation">MethodImpl</span>(<span class="enum">MethodImplOptions</span>.Synchronized)]</pre>
+						<pre><span class="lnum">  12:  </span>        [<span class="annotation">Test</span>]</pre>
+						<pre><span class="lnum">  13:  </span>        <span class="kwrd">public</span> <span class="kwrd">void</span> <span class="method">MyFirstTest</span>([<span class="class">ValueSource</span>(<span class="kwrd">typeof</span>(<span class="class">PlatformTestData</span>), <span class="str">"GetPlatforms"</span>)] <span class="class">PlatformTestData</span> platform) {</pre>
 						<pre><span class="lnum">  14:  </span>            Setup(platform);</pre>
 						<pre><span class="lnum">  15:  </span>            </pre>
 						<pre><span class="lnum">  16:  </span>            <span class="rem">//</span></pre>
@@ -116,9 +116,7 @@ layout: default
 						<pre><span class="lnum">  21:  </span>}</pre>
 						</div>
 						
-						<div class="space-sm"></div>
-						
-						
+						<div class="space-sm"></div>						
 					</div>
 				</div>
 			</div>
