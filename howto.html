@@ -81,28 +81,32 @@ layout: default
 						<p>Let's have a look at what your test classes need to look like.</p>
 						
 						<div class="space-sm"></div>
-						<pre class="prettyprint linenums">
-using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
-using Saucery.Tests;
-using Saucery.ValueSources;
-using System;
-using System.Runtime.CompilerServices;
-
-namespace MyApp.MyAppTests.Tests {
-    public class MyTests : SauceryBase {
-        [MethodImpl(MethodImplOptions.Synchronized)]
-        [Test]
-        public void MyFirstTest([ValueSource(typeof(PlatformTestData), "GetPlatforms")] PlatformTestData platform) {
-            Setup(platform);
-	    //
-	    // Insert your test code here
-	    //
-        }
-    }
-}
-						</pre>
+						
+						<!-- code formatted by http://manoli.net/csharpformat/ -->
+						<div class="csharpcode">
+						<pre><span class="lnum">   1:  </span><span class="kwrd">using</span> NUnit.Framework;</pre>
+						<pre><span class="lnum">   2:  </span><span class="kwrd">using</span> OpenQA.Selenium;</pre>
+						<pre><span class="lnum">   3:  </span><span class="kwrd">using</span> OpenQA.Selenium.Support.UI;</pre>
+						<pre><span class="lnum">   4:  </span><span class="kwrd">using</span> Saucery.Tests;</pre>
+						<pre><span class="lnum">   5:  </span><span class="kwrd">using</span> Saucery.ValueSources;</pre>
+						<pre><span class="lnum">   6:  </span><span class="kwrd">using</span> System;</pre>
+						<pre><span class="lnum">   7:  </span><span class="kwrd">using</span> System.Runtime.CompilerServices;</pre>
+						<pre><span class="lnum">   8:  </span>&nbsp;</pre>
+						<pre><span class="lnum">   9:  </span><span class="kwrd">namespace</span> MyApp.MyAppTests.Tests {</pre>
+						<pre><span class="lnum">  10:  </span>    <span class="kwrd">public</span> <span class="kwrd">class</span> MyTests : SauceryBase {</pre>
+						<pre><span class="lnum">  11:  </span>        [MethodImpl(MethodImplOptions.Synchronized)]</pre>
+						<pre><span class="lnum">  12:  </span>        [Test]</pre>
+						<pre><span class="lnum">  13:  </span>        <span class="kwrd">public</span> <span class="kwrd">void</span> MyFirstTest([ValueSource(<span class="kwrd">typeof</span>(PlatformTestData), <span class="str">"GetPlatforms"</span>)] PlatformTestData platform) {</pre>
+						<pre><span class="lnum">  14:  </span>            Setup(platform);</pre>
+						<pre><span class="lnum">  15:  </span>            </pre>
+						<pre><span class="lnum">  16:  </span>            <span class="rem">//</span></pre>
+						<pre><span class="lnum">  17:  </span>            <span class="rem">// Insert your test code here</span></pre>
+						<pre><span class="lnum">  18:  </span>            <span class="rem">//</span></pre>
+						<pre><span class="lnum">  19:  </span>        }</pre>
+						<pre><span class="lnum">  20:  </span>    }</pre>
+						<pre><span class="lnum">  21:  </span>}</pre>
+						</div>
+						
 						<div class="space-sm"></div>
 						
 						
