@@ -82,19 +82,19 @@ layout: default
 						
 						<div class="space-sm"></div>
 						<pre class="prettyprint lang-csharp">
-							private static void Main(string[] args){
-								using (var db = new VehicleInformationContext()) {
-									var man = new Manufacturer {ManufacturerId = Guid.NewGuid(), ManufacturerName = "Ford"};
-									db.Manufacturers.Add(man);
-									db.SaveChanges();
+private static void Main(string[] args){
+	using (var db = new VehicleInformationContext()) {
+		var man = new Manufacturer {ManufacturerId = Guid.NewGuid(), ManufacturerName = "Ford"};
+		db.Manufacturers.Add(man);
+		db.SaveChanges();
 
-									var query = from m in db.Manufacturers
-										orderby m.ManufacturerName
-										select m;
-									query.ForEachAsync(m => Console.WriteLine(m.ManufacturerName));
-									Console.ReadKey();
-								}
-							}
+		var query = from m in db.Manufacturers
+			orderby m.ManufacturerName
+			select m;
+		query.ForEachAsync(m => Console.WriteLine(m.ManufacturerName));
+		Console.ReadKey();
+	}
+}
 						</pre>
 						<div class="space-sm"></div>
 						
