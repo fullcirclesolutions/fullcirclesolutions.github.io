@@ -81,7 +81,7 @@ layout: default
 						<p>Let's have a look at what your test classes need to look like.</p>
 						
 						<div class="space-sm"></div>
-						<pre class="prettyprint lang-csharp">
+						<pre class="prettyprint linenums lang-csharp">
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
@@ -96,10 +96,9 @@ namespace MyApp.MyAppTests.Tests {
         [Test]
         public void MyFirstTest([ValueSource(typeof(PlatformTestData), "GetPlatforms")] PlatformTestData platform) {
             Setup(platform);
-            
-			//
-			// Insert your test code here
-			//
+		//
+		// Insert your test code here
+		//
         }
     }
 }
