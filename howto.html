@@ -148,7 +148,7 @@ layout: default
 							<pre><span class="lnum">  10:  </span>    <span class="kwrd">public</span> <span class="kwrd">class</span> <span class="class">AwesomePage</span> : <span class="class">PageObjectBase</span> {</pre>
 							<pre><span class="lnum">  11:  </span>        <span class="kwrd">public</span> AwesomePage(<span class="class">SauceryRemoteWebDriver</span> driver, <span class="class">String</span> urlRoot)</pre>
 							<pre><span class="lnum">  12:  </span>            : <span class="kwrd">base</span>(driver, urlRoot + <span class="str">"Awesome"</span>, <span class="str">"Awesome"</span>, <span class="str">"This is the Awesome Page Title"</span>) {</pre>
-							<pre><span class="lnum">  13:  </span>            GetPage();</pre>
+							<pre><span class="lnum">  13:  </span>            GetPage(5);</pre>
 							<pre><span class="lnum">  14:  </span>            CheckTitle();</pre>
 							<pre><span class="lnum">  15:  </span>            <span class="class">PageFactory</span>.InitElements(Driver, <span class="kwrd">this</span>);</pre>
 							<pre><span class="lnum">  16:  </span>        }</pre>
@@ -168,8 +168,8 @@ layout: default
 							<li>Line 10: Your testing your AwesomePage so you extend PageObjectBase.</li>
 							<li>Line 11: The constructor takes two parameters, a SauceryRemoteWebDriver and the root url of the domain you are testing (e.g http://fullcirclesolutions.com.au/).</li>
 							<li>Line 12: The parameters are used as part of the base constructor parameters: a SauceryRemoteWebDriver, the URL to this page (the page we want to test), a name, and the expected page title.</li>
-							<li>Line 13: This function asks selenium to request the page and wait for it to load.</li>
-							<li>Line 14: Assert that the Title of the page we are now on is that of the page we expect.</li>
+							<li>Line 13: This function asks selenium to request the page and wait for it to load for the specifed number of seconds.  PageObjectBase also has a default GetPage that takes no parameters and waits for 10 seconds.</li>
+							<li>Line 14: Asserts that the title of the page we are now on is that which we expect.</li>
 							<li>Line 15: This line is important and necessary if you decide to use a PageFactory class like <a href="http://relevantcodes.com/pageobjects-and-pagefactory-design-patterns-in-selenium/">this</a>.  There are other ways to do this which may make more sense (and result in cleaner code) for your application.  More on this later.</li>
 						</ul>
 						
@@ -196,23 +196,25 @@ layout: default
 							<pre><span class="lnum">  15:  </span>            Setup(platform);</pre>
 							<pre><span class="lnum">  16:  </span>&nbsp;</pre>
 							<pre><span class="lnum">  17:  </span>            <span class="kwrd">var</span> awesomePage = <span class="kwrd">new</span> <span class="class">AwesomePage</span>(Driver, <span class="class">Constants</span>.TEST_URL);</pre>
-							<pre><span class="lnum">  18:  </span>            awesomePage.WaitForPageLoad(2);</pre>
-							<pre><span class="lnum">  19:  </span>            </pre>
-							<pre><span class="lnum">  20:  </span>            <span class="rem">//</span></pre>
-							<pre><span class="lnum">  21:  </span>            <span class="rem">// Insert your test code here</span></pre>
-							<pre><span class="lnum">  22:  </span>            <span class="rem">//</span></pre>
-							<pre><span class="lnum">  23:  </span>        }</pre>
-							<pre><span class="lnum">  24:  </span>    }</pre>
-							<pre><span class="lnum">  25:  </span>}</pre>
+							<pre><span class="lnum">  18:  </span>            </pre>
+							<pre><span class="lnum">  19:  </span>            <span class="rem">//</span></pre>
+							<pre><span class="lnum">  20:  </span>            <span class="rem">// Insert your test code here</span></pre>
+							<pre><span class="lnum">  21:  </span>            <span class="rem">//</span></pre>
+							<pre><span class="lnum">  22:  </span>        }</pre>
+							<pre><span class="lnum">  23:  </span>    }</pre>
+							<pre><span class="lnum">  24:  </span>}</pre>
 						</div>
 						
 						<div class="space-sm"></div>
 						
-						<p></p>
+						<p>An added line:</p>
+						<ul class="primary">
+							<li>Line 17: Call the constructor of your page passing in the Driver from SauceryBase and the root url of your application.  As you will use it lots you might like to put it in a Constants class.</li>
+						</ul>
 						
 						<h3>Configuring the Jenkins job</h3>
-						<p>All your selected platforms should be from the WebDriver radio list.  Saucery internally will specify Appium where it is the best option for the platform you selected as recommended by SsuceLabs.</p>
-						<p>Saucery provides a Page Object base class, called, as you might expect, PageObjectBase.  This class gives you a head-start on writing object that conform to the Page Object Model.  Let's look at a usage example.</p>
+						<p>All your selected platforms should be from the WebDriver radio list. Saucery internally will specify Appium where it is the best option for the platform you selected as recommended by SsuceLabs.</p>
+						<p>Saucery provides a Page Object base class, called, as you might expect, PageObjectBase. This class gives you a head-start on writing object that conform to the Page Object Model.  Let's look at a usage example.</p>
 						
 					</div>
 				</div>
