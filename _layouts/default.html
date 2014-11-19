@@ -4,6 +4,7 @@
 		<title> {{ page.title }} </title>
 		{% include meta-tags.html %}
 		{% include link-rels.html %}
+		{% include script-rels.html %}
 		{% if page.custom_js %}
 			<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
 			<script type="text/javascript" src="../assets/js/min/fcs.min.js"></script>
@@ -16,7 +17,7 @@
 		{% if page.junit_js %}
 			<script type="text/javascript" src="../assets/js/sauceryjunit/thankyoucheck.min.js"></script>
 		{% endif %}
-		{% include script-rels.html %}
+		
 	</head>
 	<body>
 		{% include top-menu.html %}
