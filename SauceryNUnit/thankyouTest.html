@@ -111,7 +111,60 @@
 <script src="../assets/js/min/scripts.min.js"></script>
 
 <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
-<script type="text/javascript" src="../assets/js/min/fcs.min.js"></script>
+<script type="text/javascript">
+var hostAddress = '847055f0c7ed496490d0d5a13a805d55.cloudapp.net';
+function do_it(event) {
+	if($("#recaptcha_challenge_field").val() == '') {
+		debugger;
+		return;
+	} else {
+		debugger;
+		var validCaptcha = false;
+		var url = "http://"+ hostAddress + "/Service.svc/Validate/?ip=127.0.0.1&challenge=" + $('#recaptcha_challenge_field').val() + "&response=" + $('#recaptcha_response_field').val();
+		$.ajax({
+			url : url,
+			method: 'GET',
+			dataType: 'xml',
+			success : function(xml) { //On Successful service call
+						validCaptcha = xml.children[0].innerHTML;
+						if(validCaptcha != undefined && validCaptcha == 'true') {
+							debugger;
+							sendEmail(event);
+						}
+					  },
+			error: function(data) { // When Service call fails
+						debugger;
+						validCaptcha = false;
+					  }
+		});		
+		
+	}
+}
+
+function sendEmail(event){
+	debugger;
+	var url = "http://"+ hostAddress + "/Service.svc/EmailLicence/?name=" + $('#name').val() + "&companyName=" + $('#company').val() + "&emailTo=" + $('#email').val() + "&productCode=" + event.data.product;
+	$.ajax({
+		url : url,
+		method: 'GET',
+		success : function(msg) { //On Successful service call
+					document.referrer = '';
+					debugger;
+					window.location = "activation.html";
+				  },
+		error: function(msg) { // When Service call fails
+					document.referrer = '';
+					debugger;
+					window.location = "home.html";
+				  }
+	});
+}
+
+
+$(document).ready(function() {
+	$("#btnEmailLicenceKey").click({product: "SauceryNUnit"}, do_it);
+});
+</script>
 
 </head>
 <body>

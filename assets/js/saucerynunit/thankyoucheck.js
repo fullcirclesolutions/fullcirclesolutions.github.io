@@ -3,6 +3,10 @@ if (ref.indexOf("5ff4adab-3ef9-4788-b655-8c874cedfcb1.html") == -1) {
 	window.location.href = "home.html"
 }
 
+$(document).ready(function() {
+	$("#btnEmailLicenceKey").click({product: "SauceryNUnit"}, do_it);
+});
+
 function doCheck(){
 	var allFilled = true;
 	$('input[type=text][name$="-field"]').each(function(){
