@@ -1,0 +1,55 @@
+---
+title: Thank you
+layout: default
+custom_js: marker
+nunit3_js: marker
+---
+
+<!--===    HEADER     ===-->
+<section class="bg-19 bg-center bg-cover">
+	<div class="bg-filter">
+		<div class="container section-lg">
+			<h1 class="top-title">Thank you</h1>
+		</div>
+	</div>
+</section>
+<!--===/END  HEADER     ===-->
+
+<!--===    MAIN WRAP     ===-->
+<section class="section-lg">
+	<h2 class="sr-only">Activation</h2>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="slogan wow fadeInLeft">
+					<h2>Please take a moment to acquire your activation key.</h2>
+					<div class="contact-form">
+						<form role='form'>
+							<div class="form wow zoomIn" data-wow-delay='0.5s'>
+								<div class="form-group row">
+									<div class="col-md-4">
+										<input type="text" id="name" name="name-field" class="form-control transparent customerName" placeholder="Full Name">
+									</div>
+									<p class="visible-sm visible-xs"></p>
+									<div class="col-md-4">
+										<input type="text" id="company" name="company-field" class="form-control transparent customerCompany" placeholder="Company Name">
+									</div>
+									<p class="visible-sm visible-xs"></p>
+									<div class="col-md-4">
+										<input type="text" id="email" name="email-field" class="form-control transparent customerEmail" placeholder="Email">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<label>NOTE: You will need to re-enter the details you enter here into the Activation Dialog exactly, to complete activation.</label>
+					<br/>
+					<br/>
+					<div id="recaptcha_div" align="center"></div>
+					<!--Make this button active on all 3 fields populated and ReCapture successful-->
+					<input id="btnEmailLicenceKey" value="Get My Activation Key" type="submit" class="form-control btn btn-primary" style="margin-top: 24px;width: 280px;" disabled="true" onclick="checkCaptcha();"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
