@@ -7,21 +7,20 @@
 		{% include script-rels.html %}
 		{% if page.custom_js %}
 			<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+			{% if page.nunit2_js %}
+				<script type="text/javascript" src="../assets/js/min/saucerynunit2/thankyoucheck.min.js"></script>
+			{% endif %}
+			
+			{% if page.nunit3_js %}
+				<script type="text/javascript" src="../assets/js/min/saucerynunit3/thankyoucheck.min.js"></script>
+			{% endif %}
+			
+			{% if page.junit4_js %}
+				<script type="text/javascript" src="../assets/js/min/sauceryjunit4/thankyoucheck.min.js"></script>
+			{% endif %}
 			<script type="text/javascript" src="../assets/js/min/fcs.min.js"></script>
+			<script type="text/javascript" src="../assets/js/min/recaptchasupport.min.js"></script>
 		{% endif %}
-		
-		{% if page.nunit2_js %}
-			<script type="text/javascript" src="../assets/js/saucerynunit2/thankyoucheck.min.js"></script>
-		{% endif %}
-		
-		{% if page.nunit3_js %}
-			<script type="text/javascript" src="../assets/js/saucerynunit3/thankyoucheck.min.js"></script>
-		{% endif %}
-		
-		{% if page.junit4_js %}
-			<script type="text/javascript" src="../assets/js/sauceryjunit4/thankyoucheck.min.js"></script>
-		{% endif %}
-		
 	</head>
 	<body>
 		{% include top-menu.html %}
