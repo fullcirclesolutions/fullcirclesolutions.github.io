@@ -61,8 +61,14 @@
 		<priority>0.9</priority>
 	</url>
 	<url>
-		<loc>http://fullcirclesolutions.com.au/thank-you.html</loc>
-		<lastmod>2014-11-20</lastmod>
+		<loc>http://fullcirclesolutions.com.au/trial2.html</loc>
+		<lastmod>2015-10-31</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>http://fullcirclesolutions.com.au/trial3.html</loc>
+		<lastmod>2015-10-31</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>0.8</priority>
 	</url>
