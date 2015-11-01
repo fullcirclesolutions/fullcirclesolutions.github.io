@@ -17,7 +17,18 @@ layout: default
 <section class="section">
     <div class="container-sm">
         <ul class="row list-inline hidden-md hidden-lg" id="xssm-Grid">
-            {% include saucery-button-layout-xssm.html %}
+            <li class="col-xs-12 col-sm-12">
+				{% include saucery2-button-heading.html %}
+			</li>
+			<li class="col-xs-12 col-sm-12">
+				{% include saucery2-buttons.html %}
+			</li>
+			<li class="col-xs-12 col-sm-12">
+				{% include saucery3-button-heading.html %}
+			</li>
+			<li class="col-xs-12 col-sm-12">
+				{% include saucery3-buttons.html %}
+			</li>
         </ul>
         <ul class="row list-inline hidden-xs hidden-sm hidden-lg" id="md-Grid">
             {% include saucery-button-layout-md.html %}
