@@ -5,23 +5,27 @@ layout: default
 
 <!--===    HEADER     ===-->
 <section class="bg-16 bg-center bg-cover">
-    <div class="bg-filter">
-        <div class="container section-lg">
-            <h1 class="top-title">Download</h1>
-        </div>
-    </div>
+	<div class="bg-filter">
+		<div class="container section-lg">
+			<h1 class="top-title">Download</h1>
+		</div>
+	</div>
 </section>
 <!--===/END      HEADER     ===-->
 
 <!--===    MAIN WRAP     ===-->
 <section class="section">
-    <div class="container-sm">
-        <ul class="row list-inline hidden-md hidden-lg" id="xssm-Grid">
-            <li class="col-xs-12 col-sm-12">
-				{% include saucery2-button-heading.html %}
-			</li>
-			<li class="col-xs-12 col-sm-12">
+	<div class="container-sm">
+		<ul class="row list-inline" id="Grid">
+			<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<div align="center">
+					<h3>Saucery for NUnit 2</h3>
+					<p>Available on <a href="http://nuget.org/packages/saucery2" target="_blank">NuGet</a></p>
+				<div>
+			</li>
+			<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<div align="center">
+					<!--<h3>Trial Key</h3>-->
 					<a href="trial2.html" class="btn btn-primary">Try free for 30 days</a>
 					<p>OR</p>
 					<div style="display:inline-block; vertical-align: middle;">
@@ -34,11 +38,15 @@ layout: default
 					</div>
 				<div>
 			</li>
-			<li class="col-xs-12 col-sm-12">
-				{% include saucery3-button-heading.html %}
-			</li>
-			<li class="col-xs-12 col-sm-12">
+			<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<div align="center">
+					<h3>Saucery for NUnit 3</h3>
+					<p>Available on <a href="http://nuget.org/packages/saucery3" target="_blank">NuGet</a></p>
+				</div>
+			</li>
+			<li class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<div align="center">
+					<!--<h3>Trial Key</h3>-->
 					<a href="trial3.html" class="btn btn-primary">Try free for 30 days</a>
 					<p>OR</p>
 					<div style="display:inline-block; vertical-align: middle;">
@@ -51,94 +59,88 @@ layout: default
 					</div>
 				</div>
 			</li>
-        </ul>
-        <ul class="row list-inline hidden-xs hidden-sm hidden-lg" id="md-Grid">
-            {% include saucery-button-layout-md.html %}
-        </ul>
-        <ul class="row list-inline hidden-xs hidden-sm hidden-md" id="lg-Grid">
-            {% include saucery-button-layout-lg.html %}
-        </ul>
-        
-        <div class="space-sm"></div>
-        <div class="video-container">
-            <!--Saucery 3-->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/1WS5vQEi3TI?rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
-        </div>
-        
-        <div class="space-sm"></div>
-        <div class="video-container">
-            <!--Saucery 2-->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/tsRg4_My6hk?rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
-        </div>
-        
-        <div class="space-sm"></div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInLeft">
-            <p>Saucery for NUnit is a <b>DesiredCapabilities factory</b> component that you reference from your .NET test projects to make automated testing with SauceLabs easy.</p>
-            <p>Saucery also:</p>
-            <div class="space-sm"></div>
-            <ul class="info-list md-list style i-primary primary">
-                <li><i class="fa fa-play"></i>Handles Flow Control (NUnit 3 Edition) - so you don't send too many tests to SauceLabs at once thus avoiding parallel-limit rejections.</li>
-                <li><i class="fa fa-play"></i>Communicates test outcomes back to SauceLabs - Passed or Failed on your dashboard is better than Finished.</li>
-                <li><i class="fa fa-play"></i>Handles various settings for you out of the box that respect your precious testing minutes thus maximising them.</li>
-                <li><i class="fa fa-play"></i>Provides human-readable console messages.</li>
-                <li><i class="fa fa-play"></i>Includes various utility classes to help with writing tests and PageObjects.</li>
-            </ul>
-            <div class="space-sm"></div>
-            <p>With all this plumbing taken care of by Saucery, you and your team can remain focussed on writing the tests to satisfy the business needs of your application.</p>
-        </div>
-        
-        <!--<hr class="hr">
-        <ul class="list-unstyled info-list">
-            <li><strong>Category: </strong>Automated Testing</li>
-            <li><strong>Services in project: </strong>C# SauceLabs Desired Capability Factory</li>
-        </ul>-->
-        
-        <hr class="hr">
+		</ul>
+		
+		<div class="space-sm"></div>
+		<div class="video-container">
+			<!--Saucery 3-->
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/1WS5vQEi3TI?rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<div class="space-sm"></div>
+		<div class="video-container">
+			<!--Saucery 2-->
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/tsRg4_My6hk?rel=0&vq=hd720" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<div class="space-sm"></div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInLeft">
+			<p>Saucery for NUnit is a <b>DesiredCapabilities factory</b> component that you reference from your .NET test projects to make automated testing with SauceLabs easy.</p>
+			<p>Saucery also:</p>
+			<div class="space-sm"></div>
+			<ul class="info-list md-list style i-primary primary">
+				<li><i class="fa fa-play"></i>Handles Flow Control (NUnit 3 Edition) - so you don't send too many tests to SauceLabs at once thus avoiding parallel-limit rejections.</li>
+				<li><i class="fa fa-play"></i>Communicates test outcomes back to SauceLabs - Passed or Failed on your dashboard is better than Finished.</li>
+				<li><i class="fa fa-play"></i>Handles various settings for you out of the box that respect your precious testing minutes thus maximising them.</li>
+				<li><i class="fa fa-play"></i>Provides human-readable console messages.</li>
+				<li><i class="fa fa-play"></i>Includes various utility classes to help with writing tests and PageObjects.</li>
+			</ul>
+			<div class="space-sm"></div>
+			<p>With all this plumbing taken care of by Saucery, you and your team can remain focussed on writing the tests to satisfy the business needs of your application.</p>
+		</div>
+		
+		<!--<hr class="hr">
+		<ul class="list-unstyled info-list">
+			<li><strong>Category: </strong>Automated Testing</li>
+			<li><strong>Services in project: </strong>C# SauceLabs Desired Capability Factory</li>
+		</ul>-->
+		
+		<hr class="hr">
 
-        <div class="inline-btn" align="center">
-            <a class="btn btn-primary-trn btn-xlg" href="../products.html"><i class="fa fa-arrow-left"></i>Back To Products</a>
-        </div>
-    </div>
+		<div class="inline-btn" align="center">
+			<a class="btn btn-primary-trn btn-xlg" href="../products.html"><i class="fa fa-arrow-left"></i>Back To Products</a>
+		</div>
+	</div>
 </section>
 
 <!--<section class="bg-grey section">
-    <div class="container">
-        <div class="clearfix ">
-            <h3 class="pull-left">More Projects</h3>
-            <a href="../products.html">
-                <h3 class="pull-right">View all projects</h3>
-            </a>
-        </div>
-        <div class="space-sm"></div>
-        <div class="row portfolio-grid">
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio/portfolio-item-v1.html" title="View portfolio item">
-                    <div class="hover-content">
-                        <img src="assets/img/sign-up-sketch.jpg" class="img-responsive" alt="Portfolio - application">
-                        <div class="top-part hidden-xs">
-                            <i class="fa fa-eye"></i>
-                        </div>
-                        <div class="bottom-part hidden-xs">
-                            <h3>Title</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
+	<div class="container">
+		<div class="clearfix ">
+			<h3 class="pull-left">More Projects</h3>
+			<a href="../products.html">
+				<h3 class="pull-right">View all projects</h3>
+			</a>
+		</div>
+		<div class="space-sm"></div>
+		<div class="row portfolio-grid">
+			<div class="col-md-4 col-sm-6">
+				<a href="portfolio/portfolio-item-v1.html" title="View portfolio item">
+					<div class="hover-content">
+						<img src="assets/img/sign-up-sketch.jpg" class="img-responsive" alt="Portfolio - application">
+						<div class="top-part hidden-xs">
+							<i class="fa fa-eye"></i>
+						</div>
+						<div class="bottom-part hidden-xs">
+							<h3>Title</h3>
+						</div>
+					</div>
+				</a>
+			</div>
 
-            <div class="col-md-4 col-sm-6 ">
-                <a href="portfolio/portfolio-item-v1.html" title="View portfolio item">
-                    <div class="hover-content">
-                        <img src="assets/img/minimal-wireframe-assets.jpg" class="img-responsive" alt="Websites Layout">
-                        <div class="top-part hidden-xs">
-                            <i class="fa fa-eye"></i>
-                        </div>
-                        <div class="bottom-part hidden-xs">
-                            <h3>Title</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
+			<div class="col-md-4 col-sm-6 ">
+				<a href="portfolio/portfolio-item-v1.html" title="View portfolio item">
+					<div class="hover-content">
+						<img src="assets/img/minimal-wireframe-assets.jpg" class="img-responsive" alt="Websites Layout">
+						<div class="top-part hidden-xs">
+							<i class="fa fa-eye"></i>
+						</div>
+						<div class="bottom-part hidden-xs">
+							<h3>Title</h3>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
 </section>-->
 <!--===/END    MAIN WRAP     ===-->
