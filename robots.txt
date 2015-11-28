@@ -30,4 +30,5 @@ Disallow: /SauceryJUnit/privacy.html
 Disallow: /hydratedsolutions.htm
 Disallow: /xinvoices.htm
 Disallow: /privacy.htm
-sitemap: /Sitemap.xml
+
+Sitemap: /Sitemap.xml
