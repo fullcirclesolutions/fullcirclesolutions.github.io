@@ -31,4 +31,4 @@ Disallow: /hydratedsolutions.htm
 Disallow: /xinvoices.htm
 Disallow: /privacy.htm
 
-Sitemap: /Sitemap.xml
+Sitemap: http://fullcirclesolutions.com.au/Sitemap.xml
