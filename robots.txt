@@ -4,6 +4,8 @@ Disallow: /js/
 Disallow: /_layouts/
 Disallow: /_includes/
 Disallow: /SauceryNUnit/5ff4adab-3ef9-4788-b655-8c874cedfcb1.html
+Disallow: /SauceryNUnit/68dc777c-fa4e-4a98-aceb-573e2e392bfe.html
+Disallow: /SauceryJUnit/73c95102-541e-4ec1-a0c8-ea1dd8dc70a8.html
 Disallow: /*/thankyou.html
 Disallow: /*/activation.html
 sitemap: http://fullcirclesolutions.com.au/Sitemap.xml
