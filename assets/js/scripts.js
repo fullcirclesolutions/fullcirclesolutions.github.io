@@ -294,7 +294,7 @@ $(document).ready(function() {
 
 
     /*=== Mixitup - Filterable portfolio ===*/
-    $('#Grid').mixitup();
+    //$('#Grid').mixitup();
 
 
     /*=== Slippry Slideshow in frame of Macbook Pro - using on Services III ===*/
